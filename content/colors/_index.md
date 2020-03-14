@@ -1,6 +1,5 @@
 ---
 title: "Colors"
-date: 2020-03-13T16:37:24+10:00
 layout: customlayout
 type: customtype
 ---

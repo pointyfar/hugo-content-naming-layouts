@@ -1,6 +1,5 @@
 ---
 title: "Oval"
-date: 2020-03-13T22:58:49+10:00
 type: customtype
 layout: customlayout
 ---

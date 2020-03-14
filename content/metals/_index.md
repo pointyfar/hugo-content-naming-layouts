@@ -1,6 +1,5 @@
 ---
 title: "Metals"
-date: 2020-03-14T10:45:22+10:00
 layout: customlayout
 ---
 

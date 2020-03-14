@@ -1,6 +1,5 @@
 ---
 title: "Single vs List"
-date: 2020-03-14T14:22:46+10:00
 ---
 
 Or what to name your content files: `foo.md` vs `index.md` vs `_index.md`.

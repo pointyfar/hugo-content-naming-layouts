@@ -1,6 +1,5 @@
 ---
 title: "Rhombus"
-date: 2020-03-14T00:10:07+10:00
 layout: customlayout
 ---
 

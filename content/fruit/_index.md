@@ -1,6 +1,5 @@
 ---
 title: "Fruit"
-date: 2020-03-14T10:44:45+10:00
 type: customtype
 ---
 

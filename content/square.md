@@ -1,6 +1,5 @@
 ---
 title: "Square"
-date: 2020-03-13T22:29:52+10:00
 ---
 
 Top level single page

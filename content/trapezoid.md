@@ -1,6 +1,5 @@
 ---
 title: "Trapezoid"
-date: 2020-03-14T00:09:37+10:00
 type: customtype
 layout: customlayout
 ---

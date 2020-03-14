@@ -1,6 +1,5 @@
 ---
 title: "Homepage"
-date: 2020-03-13T16:52:05+10:00
 ---
 
 - [What to name your content files? `foo.md` vs `index.md` vs `_index.md`.](/single-vs-list/)
