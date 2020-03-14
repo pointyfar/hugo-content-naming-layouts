@@ -1,0 +1,17 @@
+{{ with .Pages }}
+<h3>Children Pages <code>(.Pages)</code></h3>
+<table class="table is-hoverable is-bordered is-striped">
+  <tbody>
+    <thead><tr><th>Page</th><th>File</th></tr></thead>
+    {{ range . }}
+    <tr>
+      <td><a href="{{.Permalink}}">{{.Title}}</a></td>
+      <td>{{with .File}}{{.}}{{end}}</td>
+    </tr>
+    {{ end }}
+  </tbody>
+</table>
+{{ else }}
+<h3>No Children Pages <code>(.Pages)</code></h3>
+{{ end }}
+<hr>

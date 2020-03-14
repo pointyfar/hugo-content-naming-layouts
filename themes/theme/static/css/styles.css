@@ -1,0 +1,37 @@
+html, body {
+  font-size: 14px;;
+}
+.main-content {
+  padding: 3rem;
+}
+
+.card.content-structure .card-content ol {
+  margin-left: 24px;
+}
+.card.content-structure .card-content ol li ol {
+  margin-top: 8px;
+}
+
+.card.content-structure {
+  margin-bottom: 1rem;
+}
+
+div.mermaid {
+  font-family: 'trebuchet ms', verdana, arial;
+  font-weight: 300;
+}
+
+.mermaid .label {
+  font-weight: 300;
+  font-size: 14px;
+  
+  
+}
+
+.content ol li ol:not([type]) {
+  list-style: lower-alpha;
+}
+
+.content ol li ol li ol:not([type]) {
+  list-style: lower-roman;
+}

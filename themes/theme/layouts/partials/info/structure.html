@@ -1,0 +1,46 @@
+{{$home := site.Home }}
+<h3>Content Structure</h3>
+<div class="card content-structure">
+  <div class="card-content">
+    {{ template "content-structure" (dict "currentLevel" $home "currentPage" . "level" 0 ) }}
+  </div>
+</div>
+
+<hr>
+
+{{ define "content-structure" }}
+  {{ $level := .level }}
+
+  {{ $currentLevel := .currentLevel }}
+  {{ $currentPage := .currentPage }}
+
+  {{ if $currentLevel.IsNode }}
+    {{ $children := $currentLevel.Pages }}
+    <span class="{{cond $currentLevel.IsHome "is-size-4" "" }}">
+      <a href="{{$currentLevel.Permalink}}"  class="{{ cond (eq $currentPage.Permalink $currentLevel.Permalink) "has-text-danger has-text-weight-bold" ""}}">
+        {{$currentLevel.Title}}
+      </a>
+      {{with $currentLevel.File}}<span class="has-text-grey-light"> {{.}}</span>{{end}}
+    </span>
+    <ol>
+    {{ range $children }}
+    {{ if .IsNode }}
+    <li>
+      {{template "content-structure" (dict "currentLevel" . "currentPage" $currentPage "level" (add 1 $level) ) }}
+    </li>
+    {{ else }}
+    <li>
+      <a href="{{.Permalink}}"  class="{{ cond (eq . $currentPage) "has-text-danger has-text-weight-bold" ""}}">
+        {{ .Title }}
+      </a>
+      {{with .File}}<span class="has-text-grey-light"> {{.}}</span>{{end}}
+    </li>
+    {{ end }}
+    {{ end }}
+  </ol>
+  
+  {{ end }}
+
+<!-- End template -->
+{{ end }}
+

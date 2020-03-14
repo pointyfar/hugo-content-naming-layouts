@@ -1,0 +1,18 @@
+{{ if .IsHome }}
+
+<h3>Regular Pages <code>(.RegularPages)</code></h3>
+<table class="table is-hoverable is-bordered is-striped">
+  <tbody>
+    <thead><tr><th>Page</th><th>File</th></tr></thead>
+    {{ range sort site.RegularPages ".Section" }}
+    <tr>
+      <td><a href="{{.Permalink}}">{{.Title}}</a></td>
+      <td>{{.File}}</td>
+    </tr>
+    {{ end }}
+  </tbody>
+</table>
+
+<hr>
+{{ end }}
+
