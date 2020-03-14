@@ -46,7 +46,7 @@ graph TD
     click ipsummd "/square/" "Example"
     click lindex "/clouds/" "Example"
 
-    style list stroke-width:4px, stroke:#91C7B1;
+    style lindex stroke-width:4px, stroke:#91C7B1;
     style indexmd stroke-width:4px, stroke:#91C7B1;
     style ipsummd stroke-width:4px, stroke:#91C7B1;
     style A stroke-width:4px, stroke:#6153CC;
@@ -59,6 +59,8 @@ graph TD
 ---
 
 ## Page nested one level (`yoursite.com/lorem/ipsum/`)
+
+This assumes that `content/lorem/` is a list page.
 
 ---
 
