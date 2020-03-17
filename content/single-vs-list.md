@@ -13,7 +13,7 @@ Or what to name your content files: `foo.md` vs `index.md` vs `_index.md`.
 graph TD
     A("yoursite.com/lorem/") --> C
     
-    C{"Does this page have child pages <br/> (ie /lorem/ipsum/)?<br/>"}
+    C{"Does this page <br/>have child pages <br/> (ie /lorem/ipsum/)?<br/>"}
     C --- D[Yes]
     C --- E[No]
         E --> F
@@ -69,7 +69,7 @@ This assumes that `content/lorem/` is a list page.
 graph TD
     A("yoursite.com/lorem/ipsum/") --> C
     
-    C{"Does this page have child pages <br/> (ie /lorem/ipsum/dolor/)?<br/>"}
+    C{"Does this page <br/>have child pages <br/> (ie /lorem/ipsum/dolor/)?<br/>"}
     C --- D[Yes]
     C --- E[No]
         E --> F
