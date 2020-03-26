@@ -24,3 +24,4 @@ title: "Homepage"
         - [custom layout set](/rhombus/)
         - [no custom type or layout set](/square/)
         - [both custom type and layout set](/oval/)
+- [What about Page Resources?](/page-resources/)

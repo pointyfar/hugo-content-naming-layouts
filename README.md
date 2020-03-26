@@ -67,6 +67,12 @@ It's a similar flowchart even for nested pages, for example a page at `yoursite.
 
 [^1]: excluding aliases, permalinks, custom urls
 
+-----
+
+## On Hugo's Layout Lookup Order
+
+
+
 
 ## See in action
 

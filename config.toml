@@ -1,7 +1,7 @@
 baseURL = "https://cocky-aryabhata-833924.netlify.com/"
 languageCode = "en-us"
 title = "My New Hugo Site"
-
+relativeURLs = true
 theme = "theme"
 
 [markup]
