@@ -1,6 +1,6 @@
 
 {{ $panelid := first 5 (now | md5 )}}
-{{ $panelid }}
+
 <div class="info-panel-icon-wrapper info-panel-icon-closed" onclick="togglepanel(this)" data-target-expand="panel-{{$panelid | safeHTMLAttr}}">
     <div class="info-panel-icon">«</div>
 </div>

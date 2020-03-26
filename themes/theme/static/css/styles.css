@@ -39,7 +39,6 @@ div.mermaid {
 .info-panel-icon-wrapper {
   background-color: #9A348E;
   border-radius: 15px 0 0 15px;
-  border: 5px solid #EEEEEE;
   border-right: 0;
   text-align: center;
   
@@ -47,11 +46,13 @@ div.mermaid {
   top: 200px;
   right: 450px;
   z-index: 200;
-  margin: 15px 0 0 0;
+  margin: 15px 0 10px 0;
+  transition: all .5s ease;
 }
 
 .info-panel-icon-closed {
   right: 0;
+
 }
 
 .info-panel-icon {
@@ -65,6 +66,7 @@ div.mermaid {
 .info-panel {
   z-index: 100;
   background-color: #EEEEEE;
+  border-left: #9A348E solid 10px;
   padding: 8px;
   width: 450px;
   position: fixed;
@@ -72,6 +74,7 @@ div.mermaid {
   height: 100vh;
   right: 0;
   overflow: auto;
+  transition: all .5s ease;
 }
 
 .info-panel-closed {
