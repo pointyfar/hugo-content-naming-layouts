@@ -1,0 +1,20 @@
+
+{{ $panelid := first 5 (now | md5 )}}
+{{ $panelid }}
+<div class="info-panel-icon-wrapper info-panel-icon-closed" onclick="togglepanel(this)" data-target-expand="panel-{{$panelid | safeHTMLAttr}}">
+    <div class="info-panel-icon">«</div>
+</div>
+<div class="info-panel info-panel-closed" id="panel-{{$panelid | safeHTMLAttr}}">
+{{ partial "info.html" . }}
+</div>
+
+<script>
+    const togglepanel = function(e){
+        const toggle = e;
+        const targetId = toggle.dataset.targetExpand;
+        const target = document.getElementById(targetId);
+        target.classList.toggle('info-panel-closed');
+        toggle.classList.toggle('info-panel-icon-closed');
+        console.log(target);
+    }
+</script>
