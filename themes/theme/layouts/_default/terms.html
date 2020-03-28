@@ -1,3 +1,19 @@
 {{ define "set-layout" }}
 {{.Scratch.Set "layout" "layouts/_default/terms.html"}}
 {{ end }}
+{{ define "main" }}
+<div class="card">
+    <div class="card-content">
+        <h2>{{.Title}}</h2>
+        {{.Pages}}
+        <ul>
+            {{ range .Pages }}
+            <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+            {{ end }}
+        </ul>
+        <hr>
+        {{.Content}}
+    </div>
+  </div>
+
+{{ end }}

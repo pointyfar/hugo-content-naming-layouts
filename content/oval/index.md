@@ -2,6 +2,9 @@
 title: "Oval"
 type: customtype
 layout: customlayout
+tags: 
+- lorem
+- ipsum
 ---
 
 [Docs reference](https://gohugo.io/templates/lookup-order/#examples-layout-lookup-for-regular-pages)

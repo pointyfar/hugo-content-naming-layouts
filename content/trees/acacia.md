@@ -1,6 +1,7 @@
 ---
 title: "Acacia"
 type: customtype
+taxos: a
 ---
 
 Frontmatter:

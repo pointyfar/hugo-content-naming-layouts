@@ -1,4 +1,6 @@
 ---
 title: "Apricots"
+taxos:
+- a
 ---
 

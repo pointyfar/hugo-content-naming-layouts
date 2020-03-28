@@ -2,6 +2,7 @@
 title: "Pine"
 layout: customlayout
 type: custompine
+tags: lorem
 ---
 
 Frontmatter:

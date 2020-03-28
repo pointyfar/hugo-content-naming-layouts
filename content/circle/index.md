@@ -3,6 +3,8 @@ title: "Circle"
 outputs: 
 - amp
 - html
+categories: round
+
 ---
 
 Refer to flowchart [here](/square/).

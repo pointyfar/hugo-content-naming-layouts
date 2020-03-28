@@ -1,6 +1,8 @@
 ---
 title: "Fruit"
 type: customtype
+categories: alive
+
 ---
 
 Frontmatter: 

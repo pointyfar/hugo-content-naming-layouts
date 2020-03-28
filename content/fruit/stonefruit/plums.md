@@ -1,4 +1,5 @@
 ---
 title: "Plums"
+tags: ipsum
 ---
 

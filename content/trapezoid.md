@@ -2,6 +2,7 @@
 title: "Trapezoid"
 type: customtype
 layout: customlayout
+tags: lorem
 ---
 
 Frontmatter:

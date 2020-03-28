@@ -1,4 +1,6 @@
 ---
 title: "A"
+taxos:
+- a
 ---
 

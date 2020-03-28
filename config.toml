@@ -11,3 +11,8 @@ theme = "theme"
       unsafe = true
     [markup.goldmark.extensions]
       footnote = true
+
+[taxonomies]
+  category = "categories"
+  taxo = "taxos"
+  tags = "tags"
