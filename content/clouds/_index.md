@@ -44,26 +44,26 @@ graph TD
 ---
 
 ```
-<type>          / <type>         . <outputformat> . html
-                / <kind>         . <outputformat> . html
-                /  list          . <outputformat> . html
-<type>          / <type>                          . html
-                / <kind>                          . html
-                /  list                           . html    <-- this page example
+<type>          / <type>         . <outputformat>. <suffix>
+                / <kind>         . <outputformat>. <suffix>
+                /  list          . <outputformat>. <suffix>
+<type>          / <type>                         . <suffix>
+                / <kind>                         . <suffix>
+                /  list                          . <suffix>    <-- this page example
 
-<kind>          / <type>         . <outputformat> . html
-                / <kind>         . <outputformat> . html
-                /  list          . <outputformat> . html
-<kind>          / <type>                          . html
-                / <kind>                          . html
-                /  list                           . html
+<kind>          / <type>         . <outputformat>. <suffix>
+                / <kind>         . <outputformat>. <suffix>
+                /  list          . <outputformat>. <suffix>
+<kind>          / <type>                         . <suffix>
+                / <kind>                         . <suffix>
+                /  list                          . <suffix>
 
-<_default>      / <type>         . <outputformat> . html
-                / <kind>         . <outputformat> . html
-                /  list          . <outputformat> . html
-<_default>      / <type>                          . html
-                / <kind>                          . html
-                /  list                           . html    <-- present, ignored
+<_default>      / <type>         . <outputformat>. <suffix>
+                / <kind>         . <outputformat>. <suffix>
+                /  list          . <outputformat>. <suffix>
+<_default>      / <type>                         . <suffix>
+                / <kind>                         . <suffix>
+                /  list                          . <suffix>    <-- present, ignored
 
 ```
 

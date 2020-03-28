@@ -15,13 +15,13 @@ layout: {{< param "layout">}}
 From higher priority to lower priority:
 
 ```
-<customtype>    /  single           . <outputformat> . html
-                /  single                            . html
+<customtype>    /  single           . <outputformat> . <suffix>
+                /  single                            . <suffix>
                   
-<_default>      / <customlayout>    . <outputformat> . html
-                /  single           . <outputformat> . html
-                / <customlayout>                     . html  <-- this page example
-                /  single                            . html  <-- present, ignored
+<_default>      / <customlayout>    . <outputformat> . <suffix>
+                /  single           . <outputformat> . <suffix>
+                / <customlayout>                     . <suffix>  <-- this page example
+                /  single                            . <suffix>  <-- present, ignored
 ```
 
 {{< back >}}

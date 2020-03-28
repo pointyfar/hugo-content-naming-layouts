@@ -45,13 +45,13 @@ graph TD
 ---
 
 ```
-<customtype>    /  single           . <outputformat> . html
-                /  single                            . html
+<customtype>    /  single           . <outputformat> . <suffix>
+                /  single                            . <suffix>
                   
-<_default>      / <customlayout>    . <outputformat> . html
-                /  single           . <outputformat> . html
-                / <customlayout>                     . html
-                /  single                            . html  <-- this page example
+<_default>      / <customlayout>    . <outputformat> . <suffix>
+                /  single           . <outputformat> . <suffix>
+                / <customlayout>                     . <suffix>
+                /  single                            . <suffix>  <-- this page example
 ```
 
 - `layouts/posts/single.html.html `

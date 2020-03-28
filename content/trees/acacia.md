@@ -11,12 +11,12 @@ type: customtype
 From higher priority to lower priority:
 
 ```
-<customtype>    /  single   . <outputformat> . html
-                /  single                    . html  <-- this page example
+<customtype>    /  single   . <outputformat> . <suffix>
+                /  single                    . <suffix>  <-- this page example
 
-<type>          /  single   . <outputformat> . html
-                /  single                    . html
+<type>          /  single   . <outputformat> . <suffix>
+                /  single                    . <suffix>
                   
-<_default>      /  single   . <outputformat> . html
-                /  single                    . html  <-- present, ignored
+<_default>      /  single   . <outputformat> . <suffix>
+                /  single                    . <suffix>  <-- present, ignored
 ```

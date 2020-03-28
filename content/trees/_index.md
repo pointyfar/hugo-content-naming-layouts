@@ -1,5 +1,8 @@
 ---
 title: "Trees"
+cascade:
+      categories:
+            - alive
 ---
 
 Nested single page

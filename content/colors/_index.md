@@ -15,40 +15,40 @@ type: {{< param "type">}}
 
 
 ```
-<customtype>    / <type> . <outputformat> . html
-                / <kind> . <outputformat> . html
-                /  list  . <outputformat> . html
+<customtype>    / <type> . <outputformat>. <suffix>
+                / <kind> . <outputformat>. <suffix>
+                /  list  . <outputformat>. <suffix>
 
-<customtype>    / <customlayout>    . html    <-- see note
-                / <type>            . html
-                / <kind>            . html
-                /  list             . html    <-- this page example
+<customtype>    / <customlayout>   . <suffix>    <-- see note
+                / <type>           . <suffix>
+                / <kind>           . <suffix>
+                /  list            . <suffix>    <-- this page example
 
-<type>          / <customlayout>    . <outputformat> . html
-                / <type>            . <outputformat> . html
-                / <kind>            . <outputformat> . html
-                /  list             . <outputformat> . html
-<type>          / <customlayout>    . html    <-- present, ignored
-                / <type>            . html
-                / <kind>            . html
-                /  list             . html
+<type>          / <customlayout>    . <outputformat>. <suffix>
+                / <type>            . <outputformat>. <suffix>
+                / <kind>            . <outputformat>. <suffix>
+                /  list             . <outputformat>. <suffix>
+<type>          / <customlayout>   . <suffix>    <-- present, ignored
+                / <type>           . <suffix>
+                / <kind>           . <suffix>
+                /  list            . <suffix>
 
-<kind>          / <customlayout>    . <outputformat> . html
-                / <type>            . <outputformat> . html
-                / <kind>            . <outputformat> . html
-                /  list             . <outputformat> . html
-<kind>          / <type>            . html
-                / <kind>            . html
-                /  list             . html
+<kind>          / <customlayout>    . <outputformat>. <suffix>
+                / <type>            . <outputformat>. <suffix>
+                / <kind>            . <outputformat>. <suffix>
+                /  list             . <outputformat>. <suffix>
+<kind>          / <type>           . <suffix>
+                / <kind>           . <suffix>
+                /  list            . <suffix>
 
-<_default>      / <customlayout>    . <outputformat> . html
-                / <type>            . <outputformat> . html
-                / <kind>            . <outputformat> . html
-                /  list             . <outputformat> . html
-<_default>      / <customlayout>    . html
-                / <type>            . html
-                / <kind>            . html
-                /  list             . html    <-- present, ignored
+<_default>      / <customlayout>    . <outputformat>. <suffix>
+                / <type>            . <outputformat>. <suffix>
+                / <kind>            . <outputformat>. <suffix>
+                /  list             . <outputformat>. <suffix>
+<_default>      / <customlayout>   . <suffix>
+                / <type>           . <suffix>
+                / <kind>           . <suffix>
+                /  list            . <suffix>    <-- present, ignored
 
 ```
 

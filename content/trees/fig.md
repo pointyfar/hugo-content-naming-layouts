@@ -12,15 +12,15 @@ layout: customlayout
 From higher priority to lower priority:
 
 ```
-<type>          / <customlayout>    . <outputformat> . html
-                /  single           . <outputformat> . html
-                / <customlayout>                     . html  <-- this page example
-                /  single                            . html
+<type>          / <customlayout>    . <outputformat> . <suffix>
+                /  single           . <outputformat> . <suffix>
+                / <customlayout>                     . <suffix>  <-- this page example
+                /  single                            . <suffix>
                   
 <_default>      
-                / <customlayout>    . <outputformat> . html
-                /  single           . <outputformat> . html
-                / <customlayout>                     . html  
-                /  single                            . html  <-- present, ignored
+                / <customlayout>    . <outputformat> . <suffix>
+                /  single           . <outputformat> . <suffix>
+                / <customlayout>                     . <suffix>  
+                /  single                            . <suffix>  <-- present, ignored
 ```
 
