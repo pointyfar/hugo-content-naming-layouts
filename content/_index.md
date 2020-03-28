@@ -24,11 +24,11 @@ Scroll down for lookup rules for homepage.
 
 ---
 
-Lookup Rules for homepage:
+### Lookup Rules for `homepage` `.Kind`:
 
 {{<mermaid>}}
 graph TD
-    A("homepage: example.com/") --> B
+    A("homepage: <br/> content/_index.md <br/> example.com/") --> B
     
     B{Type Set}
     B --- By[Yes]
@@ -78,11 +78,11 @@ graph TD
 
 
                   <index>     . <outputformat> . <suffix>
-                  <kind>      . <outputformat> . <suffix>   <-- see note A
-                   list       . <outputformat> . <suffix>
+                  <kind>      . <outputformat> . <suffix>
+                   list       . <outputformat> . <suffix>   <-- see note A.4
 
-                  <index>                      . <suffix>   <-- this layout in use, see note B
-                  <kind>                       . <suffix>   <-- this layout in use, see note A
+                  <index>                      . <suffix>   <-- see note A.1, A.3, B
+                  <kind>                       . <suffix>   <-- see note A.2
                    list                        . <suffix>
 
 
@@ -99,10 +99,10 @@ graph TD
 Notes:
 
 Note A. 
-- [amp](/amp/) output using `layouts/index.html` (See Note B)
-- [json](/index.json) output using `layouts/home.json` = `<kind>.<suffix>`
-- [html](/index.html) output using `layouts/index.html`
-- [rss](/index.xml) output using `layouts/list.rss.xml` = `<list>.<outputformat>.<suffix>` (note description tag)
+1. [amp](/amp/) output using `layouts/index.html` (Also See Note B)
+2. [json](/index.json) output using `layouts/home.json` = `<kind>.<suffix>`
+3. [html](/index.html) output using `layouts/index.html`
+4. [rss](/index.xml) output using `layouts/list.rss.xml` = `<list>.<outputformat>.<suffix>` (note description tag)
 
 
 Note B. The homepage is also configured to generate an AMP page. However, no `**.amp.html` layout files are found,
