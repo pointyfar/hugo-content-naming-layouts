@@ -16,6 +16,11 @@ on the right to expand info panel.
 - [What layout files will be used?](/layout-lookup/)    
 - [What about Page Resources?](/page-resources/)
 
+---
+
+Scroll down for lookup rules for homepage.
+
+<div style="height:300px;"></div>
 
 ---
 
@@ -23,7 +28,7 @@ Lookup Rules for homepage:
 
 {{<mermaid>}}
 graph TD
-    A("content/_index.md") --> B
+    A("homepage: example.com/") --> B
     
     B{Type Set}
     B --- By[Yes]
@@ -48,29 +53,28 @@ graph TD
 
 {{</mermaid>}}
 
-- [amp](/amp/)
-- [json](/index.json)
-- [html](/index.html)
 
 ```
 
-<customtype>    /   <index>     . <outputformat> . <suffix>
-                /   <kind>      . <outputformat> . <suffix>
-                /    list       . <outputformat> . <suffix>
+<customtype>    / <customlayout> . <outputformat> . <suffix>    
+                / <index>        . <outputformat> . <suffix>
+                / <kind>         . <outputformat> . <suffix>
+                /  list          . <outputformat> . <suffix>
 
-<customtype>    / <customlayout>                 . <suffix>    
-                /   <index>                      . <suffix>
-                /   <kind>                       . <suffix>      <-- uncomment frontmatter line #1 (and/or #2)
-                /    list                        . <suffix>
+<customtype>    / <customlayout>                  . <suffix>    
+                / <index>                         . <suffix>
+                / <kind>                          . <suffix>  <-- uncomment frontmatter line #1 (and/or #2)
+                /  list                           . <suffix>
 
-<type>          / <customlayout>    . <outputformat> . <suffix>
-                / <type>            . <outputformat> . <suffix>
-                / <kind>            . <outputformat> . <suffix>
-                /  list             . <outputformat> . <suffix>
-<type>          / <customlayout>    . <suffix>                   <-- uncomment frontmatter line #2
-                / <type>            . <suffix>
-                / <kind>            . <suffix>
-                /  list             . <suffix>
+<type>          / <customlayout> . <outputformat> . <suffix>
+                / <type>         . <outputformat> . <suffix>
+                / <kind>         . <outputformat> . <suffix>
+                /  list          . <outputformat> . <suffix>
+
+<type>          / <customlayout>                  . <suffix>  <-- uncomment frontmatter line #2
+                / <type>                          . <suffix>
+                / <kind>                          . <suffix>
+                /  list                           . <suffix>
 
 
                   <index>     . <outputformat> . <suffix>
@@ -92,16 +96,16 @@ graph TD
 
 ```
 
-Note:
+Notes:
 
-A. 
-- [amp](/amp/) output using `layouts/index.html`
+Note A. 
+- [amp](/amp/) output using `layouts/index.html` (See Note B)
 - [json](/index.json) output using `layouts/home.json` = `<kind>.<suffix>`
 - [html](/index.html) output using `layouts/index.html`
 - [rss](/index.xml) output using `layouts/list.rss.xml` = `<list>.<outputformat>.<suffix>` (note description tag)
 
 
-B. The homepage is also configured to generate an AMP page. However, no `**.amp.html` layout files are found,
-that match the lookup order, so it uses `index.html` as instead.
+Note B. The homepage is also configured to generate an AMP page. However, no `**.amp.html` layout files are found,
+that match the lookup order, so it uses `layouts/index.html` as instead.
 
 
