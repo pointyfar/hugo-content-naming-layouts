@@ -1,0 +1,11 @@
+{
+    title: {{ .Title }},
+    type: {{.Type}},
+    kind: {{.Kind}},
+    isNode: {{.IsNode}},
+    layout: "layouts/metals/list.json",
+    urls: [
+        "/metals/",
+        "/clouds/"
+    ]
+}

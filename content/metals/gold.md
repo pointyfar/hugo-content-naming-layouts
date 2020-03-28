@@ -5,3 +5,9 @@ outputs:
 - html
 ---
 
+Frontmatter:
+```
+outputs: 
+- amp
+- html
+```

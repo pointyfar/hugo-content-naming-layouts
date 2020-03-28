@@ -45,7 +45,7 @@ on the right to expand the info panel to see these values.
     - [both custom type and layout set](/pine/)
 
 - for `section` `.Kind` (list pages, ie `example.com/posts/`)
-    - [main flowchart](/clouds/)
+    - [main flowchart / discussion](/clouds/)
     - [custom type set](/fruit/)
     - [custom layout set](/metals/)
     - [no custom type or layout set](/clouds/)
@@ -60,3 +60,30 @@ on the right to expand the info panel to see these values.
         - [both custom type and layout set](/oval/)
     - [single page with `amp` output format](/amp/metals/silver/) #1
     - [single page with `amp` output format](/amp/circle/) #2
+
+
+Some scenarios:
+
+- Section `lorem/_index.md` has `customtype`
+    - child pages `lorem/ipsum.md` will have `.Type` = `lorem` [^1]
+
+        See examples:
+        - [`content/fruit/_index.md`](/fruit/): `type: customtype` => `.Type` = `customtype`
+        - [`content/fruit/banana.md`](/fruit/banana): `.Type` = `fruit`
+
+    - child section `lorem/ipsum/_index.md` will have `.Type` = `lorem` [^1]
+
+        See examples:
+        - [`content/fruit/_index.md`](/fruit/): `type: customtype` => `.Type` = `customtype`
+        - [`content/fruit/berries/_index.md`](/fruit/berries/): `.Type` = `fruit`
+    
+
+- Section `lorem/_index.md` has `customlayout`
+    - child pages `lorem/ipsum.md` will not use `customlayout` [^1]
+
+        See examples:
+        - [`content/metals/_index.md`](/metals/): `layout: customlayout` => layout = `metals/customlayout.html`
+        - [`content/metals/gold.md`](/metals/gold/): layout = `_default/single.html`
+
+
+[^1]: unless cascaded from parent or otherwise configured.
