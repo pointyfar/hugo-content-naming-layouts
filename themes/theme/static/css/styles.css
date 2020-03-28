@@ -72,12 +72,11 @@ div.mermaid {
   position: fixed;
   top: 0;
   height: 100vh;
-  right: 0;
   overflow: auto;
   transition: all .5s ease;
+  right: 0px;
 }
 
 .info-panel-closed {
-  right: -20px;
-  width: 0px;
+  right: -440px;
 }
