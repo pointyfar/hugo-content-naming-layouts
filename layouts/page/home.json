@@ -1,0 +1,12 @@
+{
+    title: {{ .Title }},
+    type: {{.Type}},
+    kind: {{.Kind}},
+    isNode: {{.IsNode}},
+    layout: "layouts/page/home.json",
+    urls: [
+        "/amp/",
+        "/index.json",
+        "/index.html"
+    ]
+}
