@@ -10,13 +10,13 @@ The least specific criteria which Hugo uses is what `.Kind` a page is.
 
 With just these two default layout files, Hugo will already be able to render your site:
 
-- `_default/list.html`
-    - `home` `.Kind`  (`yoursite.com/index.html`)
-    - `section` `.Kind` pages (`yoursite.com/posts/`)
-    - `taxonomyTerm` `.Kind` pages (`yoursite.com/tags/`)
-    - `taxonomy` `.Kind` pages (`yoursite.com/tags/awesome/`)
-- `_default/single.html` 
-    - `page` `.Kind` (regular content) (`yoursite.com/posts/lorem-ipsum/`)
+- `layouts/_default/list.html`
+    - `home` `.Kind`  (`example.com/index.html`)
+    - `section` `.Kind` pages (`example.com/posts/`)
+    - `taxonomyTerm` `.Kind` pages (`example.com/tags/`)
+    - `taxonomy` `.Kind` pages (`example.com/tags/awesome/`)
+- `layouts/_default/single.html` 
+    - `page` `.Kind` (regular content) (`example.com/posts/lorem-ipsum/`)
 
 But what if you want to use different layouts for different pages? This is where the layout lookup rules come in.
 
@@ -34,14 +34,17 @@ on the right to expand the info panel to see these values.
 
 ---
 
-- for `page` `.Kind` (single pages, ie `yoursite.com/posts/lorem-ipsum/`)
+- for `homepage` `.Kind` (`example.com/`)
+    - [flowchart](/#lookup-rules-for-homepage)
+    
+- for `page` `.Kind` (single pages, ie `example.com/posts/lorem-ipsum/`)
     - [main flowchart](/trees/)
     - [custom type set](/trees/acacia/)
     - [custom layout set](/trees/fig/)
     - [no custom type or layout set](/mahogany/)
     - [both custom type and layout set](/pine/)
 
-- for `section` `.Kind` (list pages, ie `yoursite.com/posts/`)
+- for `section` `.Kind` (list pages, ie `example.com/posts/`)
     - [main flowchart](/clouds/)
     - [custom type set](/fruit/)
     - [custom layout set](/metals/)
@@ -49,7 +52,7 @@ on the right to expand the info panel to see these values.
     - [both custom type and layout set](/colors/)
 
 - Other examples
-    - for single pages (top level, ie `yoursite.com/lorem/`)
+    - for single pages (top level, ie `example.com/lorem/`)
         - [main flowchart](/square/)
         - [custom type set](/rectangle/)
         - [custom layout set](/rhombus/)
