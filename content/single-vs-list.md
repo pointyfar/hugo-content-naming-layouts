@@ -7,11 +7,11 @@ Or what to name your content files: `foo.md` vs `index.md` vs `_index.md`.
 {{< toc >}}
 
 
-## Top level page (`yoursite.com/lorem/`)
+## Top level page (`example.com/lorem/`)
 
 {{<mermaid>}}
 graph TD
-    A("yoursite.com/lorem/") --> C
+    A("example.com/lorem/") --> C
     
     C{"Does this page <br/>have child pages <br/> (ie /lorem/ipsum/)?<br/>"}
     C --- D[Yes]
@@ -58,7 +58,7 @@ graph TD
 
 ---
 
-## Page nested one level (`yoursite.com/lorem/ipsum/`)
+## Page nested one level (`example.com/lorem/ipsum/`)
 
 This assumes that `content/lorem/` is a list page.
 
@@ -67,7 +67,7 @@ This assumes that `content/lorem/` is a list page.
 
 {{<mermaid>}}
 graph TD
-    A("yoursite.com/lorem/ipsum/") --> C
+    A("example.com/lorem/ipsum/") --> C
     
     C{"Does this page <br/>have child pages <br/> (ie /lorem/ipsum/dolor/)?<br/>"}
     C --- D[Yes]
