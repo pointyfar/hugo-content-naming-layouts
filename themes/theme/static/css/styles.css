@@ -1,6 +1,14 @@
 html, body {
   font-size: 14px;;
 }
+
+code {
+  color: #375e9c;
+}
+
+a, .breadcrumb a {
+  color: #9A348E;
+}
 .main-content {
   padding: 3rem;
 }
@@ -28,6 +36,11 @@ div.mermaid {
   
 }
 
+.content li p:not(:last-child) {
+
+  margin-bottom: 0;
+}
+
 .content ol li ol:not([type]) {
   list-style: lower-alpha;
 }
@@ -52,13 +65,19 @@ div.mermaid {
 
 .info-panel-icon-closed {
   right: 0;
-
+  
+}
+.info-panel-icon-closed .info-panel-icon {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .info-panel-icon {
+  transition: transform 1s ease;
   font-size: 40px;
   color: #EEEEEE;
   width: 50px;
+  
 }
 
 
