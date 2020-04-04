@@ -6,21 +6,20 @@ title: "Layout Lookup Order"
 
 Hugo considers several factors in determining what layout files to use in rendering each page.
 
-The least specific criteria which Hugo uses is what `.Kind` a page is. 
-
 With just these two default layout files, Hugo will already be able to render your site:
 
-- `layouts/_default/list.html`
-    - `home` `.Kind`  (`example.com/index.html`)
-    - `section` `.Kind` pages (`example.com/posts/`)
-    - `taxonomyTerm` `.Kind` pages (`example.com/tags/`)
-    - `taxonomy` `.Kind` pages (`example.com/tags/awesome/`)
-- `layouts/_default/single.html` 
-    - `page` `.Kind` (regular content) (`example.com/posts/lorem-ipsum/`)
+- `layouts/_default/list.html`, applicable to the following `.Kind`s:
+    - `home`  (`example.com/index.html`)
+    - `section` (`example.com/posts/`)
+    - `taxonomyTerm` (`example.com/tags/`)
+    - `taxonomy` (`example.com/tags/awesome/`)
+- `layouts/_default/single.html`, applicable to the following `.Kind`:
+    - `page` (regular content) (`example.com/posts/lorem-ipsum/`)
 
 But what if you want to use different layouts for different pages? This is where the layout lookup rules come in.
 
-The other criteria that affect the layout used to generate pages are:
+The criteria that affect the layout used to generate pages are:
+- what `.Kind` a page is 
 - value of `layout` in frontmatter 
 - output format to render
 - language used
@@ -35,7 +34,7 @@ on the right to expand the info panel to see these values.
 ---
 
 - for `homepage` `.Kind` (`example.com/`)
-    - [flowchart](/#lookup-rules-for-homepage)
+    - [flowchart](/#lookup-rules-for-homepage-kind)
     
 - for `page` `.Kind` (single pages, ie `example.com/posts/lorem-ipsum/`)
     - [main flowchart](/trees/)
@@ -50,6 +49,12 @@ on the right to expand the info panel to see these values.
     - [custom layout set](/metals/)
     - [no custom type or layout set](/clouds/)
     - [both custom type and layout set](/colors/)
+
+- for `taxonomyTerm` `.Kind` (ie `example.com/tags/`)
+    - [main discussion](/tags/)
+
+- for `taxonomy` `.Kind` (ie `example.com/tags/tag-one/`)
+    - [main discussion](/tags/lorem/)
 
 - Other examples
     - for single pages (top level, ie `example.com/lorem/`)
