@@ -14,6 +14,16 @@
           {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
         </ul>
       </nav>
+
+      {{$page := .}}
+      {{ with .OutputFormats }}
+      Output Formats for  <code>{{$page}}</code>:
+      <ul class="info-outputs">
+        {{ range . -}}
+        <li><a href="{{ .Permalink | safeURL }}">{{.Name}}</a></li> 
+        {{ end -}}
+      </ul>
+      {{ end }}
       
     </div>
   </div>
