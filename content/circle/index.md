@@ -23,7 +23,7 @@ outputs:
 <customtype>    /  single           . <outputformat> . <suffix>
                 /  single                            . <suffix>
                   
-<_default>      / <customlayout>    . <outputformat> . <suffix>
+_default        / <customlayout>    . <outputformat> . <suffix>
                 /  single           . <outputformat> . <suffix>
                 / <customlayout>                     . <suffix>
                 /  single                            . <suffix>  <-- this page example

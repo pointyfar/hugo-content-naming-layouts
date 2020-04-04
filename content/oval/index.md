@@ -22,7 +22,7 @@ From higher priority to lower priority:
 <customtype>    /  single           . <outputformat> . <suffix>
                 /  single                            . <suffix>  <-- this page example
                   
-<_default>      / <customlayout>    . <outputformat> . <suffix>
+_default        / <customlayout>    . <outputformat> . <suffix>
                 /  single           . <outputformat> . <suffix>
                 / <customlayout>                     . <suffix>
                 /  single                            . <suffix>  <-- present, ignored

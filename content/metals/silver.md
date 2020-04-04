@@ -23,8 +23,7 @@ layout: customlayout
                 / <customlayout>                     . <suffix>  <-- this page example (/metals/silver/)
                 /  single                            . <suffix>
                   
-<_default>      
-                / <customlayout>    . <outputformat> . <suffix>
+_default        / <customlayout>    . <outputformat> . <suffix>
                 /  single           . <outputformat> . <suffix>
                 / <customlayout>                     . <suffix>  
                 /  single                            . <suffix>  <-- present, ignored

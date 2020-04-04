@@ -39,41 +39,42 @@ graph TD
 
 ```
 <customtype>    / <customlayout>    . <outputformat>  . <suffix>
-                / <type>            . <outputformat>  . <suffix>
+                / <section>         . <outputformat>  . <suffix>
                 / <kind>            . <outputformat>  . <suffix>
                 /  list             . <outputformat>  . <suffix>  
 
 <customtype>    / <customlayout>                      . <suffix>  <-- see note 1
-                / <type>                              . <suffix>  <-- see note 2
+                / <section>                           . <suffix>  <-- see note 2
                 / <kind>                              . <suffix>
                 /  list                               . <suffix>  <-- see note 2
 
 <type>          / <customlayout>    . <outputformat>  . <suffix>
-                / <type>            . <outputformat>  . <suffix>
+                / <section>         . <outputformat>  . <suffix>
                 / <kind>            . <outputformat>  . <suffix>
                 /  list             . <outputformat>  . <suffix>  <-- see note 3
 
 <type>          / <customlayout>                      . <suffix>  <-- see note 3
-                / <type>                              . <suffix>
+                / <section>                           . <suffix>
                 / <kind>                              . <suffix>
                 /  list                               . <suffix>  <-- see note 4
 
 <kind>          / <customlayout>    . <outputformat>  . <suffix>
-                / <type>            . <outputformat>  . <suffix>
+                / <section>         . <outputformat>  . <suffix>
                 / <kind>            . <outputformat>  . <suffix>
                 /  list             . <outputformat>  . <suffix>
 
 <kind>          / <type>                              . <suffix>
+                / <section>                           . <suffix>
                 / <kind>                              . <suffix>
                 /  list                               . <suffix>
 
-<_default>      / <customlayout>    . <outputformat>  . <suffix>
-                / <type>            . <outputformat>  . <suffix>
+_default        / <customlayout>    . <outputformat>  . <suffix>
+                / <section>         . <outputformat>  . <suffix>
                 / <kind>            . <outputformat>  . <suffix>
                 /  list             . <outputformat>  . <suffix>
 
-<_default>      / <customlayout>                      . <suffix>
-                / <type>                              . <suffix>
+_default        / <customlayout>                      . <suffix>
+                / <section>                           . <suffix>
                 / <kind>                              . <suffix>
                 /  list                               . <suffix>  <-- note 5
 
@@ -113,7 +114,7 @@ which has a higher priority, so it uses that.
 
 5. [`content/letters/_index.md`] has no custom front matter configuration. There are no layout files with a higher priority, so it uses the default list file.
 ```
-<_default> / list . <suffix> => _default_/list.html
+_default / list . <suffix> => _default_/list.html
 
 ```
 

@@ -86,11 +86,11 @@ graph TD
                    list                        . <suffix>
 
 
-<_default>      / <index>     . <outputformat> . <suffix>
+_default        / <index>     . <outputformat> . <suffix>
                   <kind>      . <outputformat> . <suffix>   
                    list       . <outputformat> . <suffix>
 
-<_default>      / <index>                      . <suffix>
+_default        / <index>                      . <suffix>
                   <kind>                       . <suffix>
                    list                        . <suffix>   <-- present, ignored
 

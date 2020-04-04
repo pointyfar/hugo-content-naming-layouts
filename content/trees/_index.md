@@ -52,7 +52,7 @@ graph TD
                 / <customlayout>                     . <suffix>  <-- Note 2
                 /  single                            . <suffix>  <-- Note 3
                   
-<_default>      / <customlayout>    . <outputformat> . <suffix>
+_default        / <customlayout>    . <outputformat> . <suffix>
                 /  single           . <outputformat> . <suffix>
                 / <customlayout>                     . <suffix>  
                 /  single                            . <suffix>  <-- Note 5
