@@ -1,17 +1,25 @@
 {{ define "set-layout" }}
-{{.Scratch.Set "layout" "layouts/_default/terms.html"}}
+{{.Scratch.Set "layout" "layouts/taxo/list.html"}}
 {{ end }}
 {{ define "main" }}
 <div class="card">
     <div class="card-content">
         {{.}}
+        {{ with .Content}}
+            {{.}}
+        {{ else }}
+            No <code>.Content</code>
+        {{ end }}
+        
+        <hr>
+        <h2>{{.Title}} / {{.Section}} </h2>
+        {{.Pages}} / {{.Data.Singular}} / {{.Data.Plural}}
         <ul>
             {{ range .Pages }}
             <li><a href="{{.Permalink}}">{{.Title}}</a></li>
             {{ end }}
         </ul>
         <hr>
-        {{.Content}}
     </div>
   </div>
 

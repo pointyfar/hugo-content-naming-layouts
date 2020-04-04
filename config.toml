@@ -15,4 +15,4 @@ theme = "theme"
 [taxonomies]
   category = "categories"
   taxo = "taxos"
-  tags = "tags"
+  tag = "tags"
