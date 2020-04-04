@@ -9,6 +9,27 @@ code {
 a, .breadcrumb a {
   color: #9A348E;
 }
+
+a:hover, .breadcrumb a:hover {
+  color: #5F2164;
+
+}
+
+a code {
+/* color: #44355B; */
+font-style: normal;
+padding-right: 0;;
+}
+
+a code:after {
+  content: ' \25E5';
+  vertical-align: super;
+}
+
+a:hover code {
+  color: #5F2164;
+
+}
 .main-content {
   padding: 3rem;
 }
@@ -98,4 +119,9 @@ div.mermaid {
 
 .info-panel-closed {
   right: -440px;
+}
+
+ul.info-outputs > li {
+  display: inline;
+  margin: 0 1rem 0 0;
 }
