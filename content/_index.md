@@ -57,40 +57,40 @@ graph TD
 ```
 
 <customtype>    / <customlayout> . <outputformat> . <suffix>    
-<customtype>    / <index>        . <outputformat> . <suffix>
+<customtype>    /  index         . <outputformat> . <suffix>
 <customtype>    / <kind>         . <outputformat> . <suffix>
 <customtype>    /  list          . <outputformat> . <suffix>
 
 <customtype>    / <customlayout>                  . <suffix>    
-<customtype>    / <index>                         . <suffix>
+<customtype>    /  index                          . <suffix>
 <customtype>    / <kind>                          . <suffix>  <-- uncomment frontmatter line #1 (and/or #2)
 <customtype>    /  list                           . <suffix>
 
 <type>          / <customlayout> . <outputformat> . <suffix>
-<type>          / <type>         . <outputformat> . <suffix>
+<type>          /  index         . <outputformat> . <suffix>
 <type>          / <kind>         . <outputformat> . <suffix>
 <type>          /  list          . <outputformat> . <suffix>
 
 <type>          / <customlayout>                  . <suffix>  <-- uncomment frontmatter line #2
-<type>          / <type>                          . <suffix>
+<type>          /  index                          . <suffix>
 <type>          / <kind>                          . <suffix>
 <type>          /  list                           . <suffix>
 
 
-                  <index>     . <outputformat> . <suffix>
+                   index      . <outputformat> . <suffix>
                   <kind>      . <outputformat> . <suffix>
                    list       . <outputformat> . <suffix>   <-- see note A.4
 
-                  <index>                      . <suffix>   <-- see note A.1, A.3, B
+                   index                       . <suffix>   <-- see note A.1, A.3, B
                   <kind>                       . <suffix>   <-- see note A.2
                    list                        . <suffix>
 
 
-_default        / <index>     . <outputformat> . <suffix>
+_default        /  index      . <outputformat> . <suffix>
 _default        / <kind>      . <outputformat> . <suffix>   
 _default        /  list       . <outputformat> . <suffix>
 
-_default        / <index>                      . <suffix>
+_default        /  index                       . <suffix>
 _default        / <kind>                       . <suffix>
 _default        /  list                        . <suffix>   <-- present, ignored
 
