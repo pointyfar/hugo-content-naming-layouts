@@ -9,56 +9,18 @@ Single page under a Section
 
 [Docs reference](https://gohugo.io/templates/lookup-order/#examples-layout-lookup-for-regular-pages)
 
-{{<mermaid>}}
-graph TD
-    A1("content/lorem/ipsum.md") --> B
-    A2("content/lorem/ipsum/index.md") --> B
-    
-    B{Type Set}
-    B --- By[Yes]
-          By --> ctype("layouts/customtype/single.html")
-    
-
-    B --- Bn[No]
-          Bn --> C{"Layout set"}
-
-    C --- Cy[Yes]
-          Cy --> dcl("layouts/**/customlayout.html")
-
-    C --- Cn[No]
-          Cn --> Default("layouts/**/single.html")
-    
-
-    classDef thick stroke-width:4px, stroke:#91C7B1;
-    class Default,pcl,dcl,ctype,Both thick;
-
-    style A1 stroke-width:4px, stroke:#6153CC;
-    style A2 stroke-width:4px, stroke:#6153CC;
-
-{{</mermaid>}}
-
----
-
-
 ```
-<customtype>    / <customlayout>    . <outputformat> . <suffix>
-<customtype>    /  single           . <outputformat> . <suffix>
-<customtype>    / <customlayout>                     . <suffix>  <-- Note 4
-<customtype>    /  single                            . <suffix>  <-- Note 1
-
-
 <type>          / <customlayout>    . <outputformat> . <suffix>
 <type>          /  single           . <outputformat> . <suffix>
-<type>          / <customlayout>                     . <suffix>  <-- Note 2
-<type>          /  single                            . <suffix>  <-- Note 3
+<type>          / <customlayout>                     . <suffix>  <-- #2, #4
+<type>          /  single                            . <suffix>  <-- #3, #1
                   
 _default        / <customlayout>    . <outputformat> . <suffix>
 _default        /  single           . <outputformat> . <suffix>
 _default        / <customlayout>                     . <suffix>  
-_default        /  single                            . <suffix>  <-- Note 5
+_default        /  single                            . <suffix>  <-- #5
 
 ```
-
 
 Notes:
 
