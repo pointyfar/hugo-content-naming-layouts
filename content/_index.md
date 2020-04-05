@@ -26,36 +26,7 @@ Scroll down for lookup rules for homepage.
 
 ### Lookup Rules for `homepage` `.Kind`:
 
-{{<mermaid>}}
-graph TD
-    A("homepage: <br/> content/_index.md <br/> example.com/") --> B
-    
-    B{Type Set}
-    B --- By[Yes]
-          By --> ctype("layouts/customtype/**.html")
-    
-
-    B --- Bn[No]
-          Bn --> C{"Layout set"}
-
-    C --- Cy[Yes]
-          Cy --> pcl("layouts/**/customlayout.html")
-
-
-    C --- Cn[No]
-          Cn --> Default("** See list below **")
-    
-
-    classDef thick stroke-width:4px, stroke:#91C7B1;
-    class Default,pcl,dcl,ctype,Both thick;
-
-    style A stroke-width:4px, stroke:#6153CC;
-
-{{</mermaid>}}
-
-
 ```
-
 <customtype>    / <customlayout> . <outputformat> . <suffix>    
 <customtype>    /  index         . <outputformat> . <suffix>
 <customtype>    / <kind>         . <outputformat> . <suffix>
