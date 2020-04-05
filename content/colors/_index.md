@@ -9,8 +9,8 @@ Both layout and type set.
 Frontmatter:
 
 ```
-layout: {{< param "layout">}}
-type: {{< param "type">}}
+layout: customlayout
+type: customtype
 ```
 
 

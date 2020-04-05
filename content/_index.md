@@ -2,7 +2,7 @@
 title: "Homepage"
 #type: customtype          # uncomment line #1
 #layout: customlayout      # uncomment line #2
-outputs:
+xoutputs:
 - html
 - json
 - amp
@@ -57,24 +57,24 @@ graph TD
 ```
 
 <customtype>    / <customlayout> . <outputformat> . <suffix>    
-                / <index>        . <outputformat> . <suffix>
-                / <kind>         . <outputformat> . <suffix>
-                /  list          . <outputformat> . <suffix>
+<customtype>    / <index>        . <outputformat> . <suffix>
+<customtype>    / <kind>         . <outputformat> . <suffix>
+<customtype>    /  list          . <outputformat> . <suffix>
 
 <customtype>    / <customlayout>                  . <suffix>    
-                / <index>                         . <suffix>
-                / <kind>                          . <suffix>  <-- uncomment frontmatter line #1 (and/or #2)
-                /  list                           . <suffix>
+<customtype>    / <index>                         . <suffix>
+<customtype>    / <kind>                          . <suffix>  <-- uncomment frontmatter line #1 (and/or #2)
+<customtype>    /  list                           . <suffix>
 
 <type>          / <customlayout> . <outputformat> . <suffix>
-                / <type>         . <outputformat> . <suffix>
-                / <kind>         . <outputformat> . <suffix>
-                /  list          . <outputformat> . <suffix>
+<type>          / <type>         . <outputformat> . <suffix>
+<type>          / <kind>         . <outputformat> . <suffix>
+<type>          /  list          . <outputformat> . <suffix>
 
 <type>          / <customlayout>                  . <suffix>  <-- uncomment frontmatter line #2
-                / <type>                          . <suffix>
-                / <kind>                          . <suffix>
-                /  list                           . <suffix>
+<type>          / <type>                          . <suffix>
+<type>          / <kind>                          . <suffix>
+<type>          /  list                           . <suffix>
 
 
                   <index>     . <outputformat> . <suffix>
@@ -87,12 +87,12 @@ graph TD
 
 
 _default        / <index>     . <outputformat> . <suffix>
-                  <kind>      . <outputformat> . <suffix>   
-                   list       . <outputformat> . <suffix>
+_default        / <kind>      . <outputformat> . <suffix>   
+_default        /  list       . <outputformat> . <suffix>
 
 _default        / <index>                      . <suffix>
-                  <kind>                       . <suffix>
-                   list                        . <suffix>   <-- present, ignored
+_default        / <kind>                       . <suffix>
+_default        /  list                        . <suffix>   <-- present, ignored
 
 ```
 

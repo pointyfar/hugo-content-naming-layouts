@@ -20,13 +20,10 @@ outputs:
 ```
 
 ```
-<customtype>    /  single           . <outputformat> . <suffix>
-                /  single                            . <suffix>
-                  
 _default        / <customlayout>    . <outputformat> . <suffix>
-                /  single           . <outputformat> . <suffix>
-                / <customlayout>                     . <suffix>
-                /  single                            . <suffix>  <-- this page example
+_default        /  single           . <outputformat> . <suffix>
+_default        / <customlayout>                     . <suffix>
+_default        /  single                            . <suffix>  <-- this page example
 
 ```
 

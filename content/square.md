@@ -14,13 +14,13 @@ graph TD
     
     B{Type Set}
     B --- By[Yes]
-          By --> ctype("layouts/customtype/single.html")
+          By --> ctype("layouts/customtype/**.html")
     
 
     Both("Example showing precedence <br/> when both are set")
 
     B --- Bn[No]
-          Bn --> C{"Layout set"}
+          Bn -- "Type = 'page'" --> C{"Layout set"}
 
     C --- Cy[Yes]
           Cy --> dcl("layouts/**/customlayout.html")
@@ -45,21 +45,21 @@ graph TD
 ---
 
 ```
+<customtype>    / <customlayout>    . <outputformat> . <suffix>
 <customtype>    /  single           . <outputformat> . <suffix>
-                /  single                            . <suffix>
+<customtype>    / <customlayout>                     . <suffix>
+<customtype>    /  single                            . <suffix>
+
+<type>          / <customlayout>    . <outputformat> . <suffix>
+<type>          /  single           . <outputformat> . <suffix>
+<type>          / <customlayout>                     . <suffix>
+<type>          /  single                            . <suffix>
                   
 _default        / <customlayout>    . <outputformat> . <suffix>
-                /  single           . <outputformat> . <suffix>
-                / <customlayout>                     . <suffix>
-                /  single                            . <suffix>  <-- this page example
+_default        /  single           . <outputformat> . <suffix>
+_default        / <customlayout>                     . <suffix>
+_default        /  single                            . <suffix>  <-- this page example
 ```
-
-- `layouts/posts/single.html.html `
-- `layouts/posts/single.html`
-- `layouts/_default/demolayout.html.html`
-- `layouts/_default/single.html.html`
-- `layouts/_default/demolayout.html`
-- `layouts/_default/single.html`
 
 
 

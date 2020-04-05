@@ -19,12 +19,12 @@ layout: customlayout
 
 ```
 <type>          / <customlayout>    . <outputformat> . <suffix>
-                /  single           . <outputformat> . <suffix>  <-- this page example (/amp/metals/silver/)
-                / <customlayout>                     . <suffix>  <-- this page example (/metals/silver/)
-                /  single                            . <suffix>
+<type>          /  single           . <outputformat> . <suffix>  <-- this page example (/amp/metals/silver/)
+<type>          / <customlayout>                     . <suffix>  <-- this page example (/metals/silver/)
+<type>          /  single                            . <suffix>
                   
 _default        / <customlayout>    . <outputformat> . <suffix>
-                /  single           . <outputformat> . <suffix>
-                / <customlayout>                     . <suffix>  
-                /  single                            . <suffix>  <-- present, ignored
+_default        /  single           . <outputformat> . <suffix>
+_default        / <customlayout>                     . <suffix>  
+_default        /  single                            . <suffix>  <-- present, ignored
 ```

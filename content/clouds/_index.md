@@ -39,44 +39,44 @@ graph TD
 
 ```
 <customtype>    / <customlayout>    . <outputformat>  . <suffix>
-                / <section>         . <outputformat>  . <suffix>
-                / <kind>            . <outputformat>  . <suffix>
-                /  list             . <outputformat>  . <suffix>  
+<customtype>    / <section>         . <outputformat>  . <suffix>
+<customtype>    / <kind>            . <outputformat>  . <suffix>
+<customtype>    /  list             . <outputformat>  . <suffix>  
 
 <customtype>    / <customlayout>                      . <suffix>  <-- see note 1
-                / <section>                           . <suffix>  <-- see note 2
-                / <kind>                              . <suffix>
-                /  list                               . <suffix>  <-- see note 2
+<customtype>    / <section>                           . <suffix>  <-- see note 2
+<customtype>    / <kind>                              . <suffix>
+<customtype>    /  list                               . <suffix>  <-- see note 2
 
 <type>          / <customlayout>    . <outputformat>  . <suffix>
-                / <section>         . <outputformat>  . <suffix>
-                / <kind>            . <outputformat>  . <suffix>
-                /  list             . <outputformat>  . <suffix>  <-- see note 3
+<type>          / <section>         . <outputformat>  . <suffix>
+<type>          / <kind>            . <outputformat>  . <suffix>
+<type>          /  list             . <outputformat>  . <suffix>  <-- see note 3
 
 <type>          / <customlayout>                      . <suffix>  <-- see note 3
-                / <section>                           . <suffix>
-                / <kind>                              . <suffix>
-                /  list                               . <suffix>  <-- see note 4
+<type>          / <section>                           . <suffix>
+<type>          / <kind>                              . <suffix>
+<type>          /  list                               . <suffix>  <-- see note 4
 
 <kind>          / <customlayout>    . <outputformat>  . <suffix>
-                / <section>         . <outputformat>  . <suffix>
-                / <kind>            . <outputformat>  . <suffix>
-                /  list             . <outputformat>  . <suffix>
+<kind>          / <section>         . <outputformat>  . <suffix>
+<kind>          / <kind>            . <outputformat>  . <suffix>
+<kind>          /  list             . <outputformat>  . <suffix>
 
 <kind>          / <type>                              . <suffix>
-                / <section>                           . <suffix>
-                / <kind>                              . <suffix>
-                /  list                               . <suffix>
+<kind>          / <section>                           . <suffix>
+<kind>          / <kind>                              . <suffix>
+<kind>          /  list                               . <suffix>
 
 _default        / <customlayout>    . <outputformat>  . <suffix>
-                / <section>         . <outputformat>  . <suffix>
-                / <kind>            . <outputformat>  . <suffix>
-                /  list             . <outputformat>  . <suffix>
+_default        / <section>         . <outputformat>  . <suffix>
+_default        / <kind>            . <outputformat>  . <suffix>
+_default        /  list             . <outputformat>  . <suffix>
 
 _default        / <customlayout>                      . <suffix>
-                / <section>                           . <suffix>
-                / <kind>                              . <suffix>
-                /  list                               . <suffix>  <-- note 5
+_default        / <section>                           . <suffix>
+_default        / <kind>                              . <suffix>
+_default        /  list                               . <suffix>  <-- note 5
 
 ```
 

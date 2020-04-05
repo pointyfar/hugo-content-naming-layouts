@@ -6,12 +6,12 @@ layout: customlayout
 frontmatter: 
 
 ```
-layout: {{< param "layout">}}
+layout: customlayout
 ```
 
 Will use 
 - `layouts/page/customlayout.html` if found, else
-- `layouts/default/customlayout.html` if found, else
-- `layouts/default/single.html`
+- `layouts/_default/customlayout.html` if found, else
+- `layouts/_default/single.html`
 
 {{< back >}}

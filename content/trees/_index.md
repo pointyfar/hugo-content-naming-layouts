@@ -42,20 +42,20 @@ graph TD
 
 ```
 <customtype>    / <customlayout>    . <outputformat> . <suffix>
-                /  single           . <outputformat> . <suffix>
-                / <customlayout>                     . <suffix>  <-- Note 4
-                /  single                            . <suffix>  <-- Note 1
+<customtype>    /  single           . <outputformat> . <suffix>
+<customtype>    / <customlayout>                     . <suffix>  <-- Note 4
+<customtype>    /  single                            . <suffix>  <-- Note 1
 
 
 <type>          / <customlayout>    . <outputformat> . <suffix>
-                /  single           . <outputformat> . <suffix>
-                / <customlayout>                     . <suffix>  <-- Note 2
-                /  single                            . <suffix>  <-- Note 3
+<type>          /  single           . <outputformat> . <suffix>
+<type>          / <customlayout>                     . <suffix>  <-- Note 2
+<type>          /  single                            . <suffix>  <-- Note 3
                   
 _default        / <customlayout>    . <outputformat> . <suffix>
-                /  single           . <outputformat> . <suffix>
-                / <customlayout>                     . <suffix>  
-                /  single                            . <suffix>  <-- Note 5
+_default        /  single           . <outputformat> . <suffix>
+_default        / <customlayout>                     . <suffix>  
+_default        /  single                            . <suffix>  <-- Note 5
 
 ```
 
