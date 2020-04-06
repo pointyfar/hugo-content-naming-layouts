@@ -7,25 +7,15 @@ Section pages
 [Docs reference](https://gohugo.io/templates/lookup-order/#examples-layout-lookup-for-section-pages)
 
 ```
-<customtype>    / <customlayout>    . <outputformat>  . <suffix>
-<customtype>    / <section>         . <outputformat>  . <suffix>
-<customtype>    / <kind>            . <outputformat>  . <suffix>
-<customtype>    /  list             . <outputformat>  . <suffix>  
-
-<customtype>    / <customlayout>                      . <suffix>  <-- see note 1
-<customtype>    / <section>                           . <suffix>  <-- see note 2
-<customtype>    / <kind>                              . <suffix>
-<customtype>    /  list                               . <suffix>  <-- see note 2
-
 <type>          / <customlayout>    . <outputformat>  . <suffix>
 <type>          / <section>         . <outputformat>  . <suffix>
 <type>          / <kind>            . <outputformat>  . <suffix>
 <type>          /  list             . <outputformat>  . <suffix>  <-- see note 3
 
-<type>          / <customlayout>                      . <suffix>  <-- see note 3
-<type>          / <section>                           . <suffix>
+<type>          / <customlayout>                      . <suffix>  <-- see note 1, 3
+<type>          / <section>                           . <suffix>  <-- see note 2
 <type>          / <kind>                              . <suffix>
-<type>          /  list                               . <suffix>  <-- see note 4
+<type>          /  list                               . <suffix>  <-- see note 2, 4
 
 <kind>          / <customlayout>    . <outputformat>  . <suffix>
 <kind>          / <section>         . <outputformat>  . <suffix>

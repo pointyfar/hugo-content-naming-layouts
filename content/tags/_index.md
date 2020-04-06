@@ -14,25 +14,15 @@ outputs:
 From the highest priority to the lowest:
 
 ```
-<customtype>    / <customlayout>        . <outputformat>  . <suffix>
-<customtype>    / <singular> . terms    . <outputformat>  . <suffix>
-<customtype>    /  terms                . <outputformat>  . <suffix>
-<customtype>    /  list                 . <outputformat>  . <suffix>
-
-<customtype>    / <customlayout>                          . <suffix>    <-- see note 6
-<customtype>    / <singular> . terms                      . <suffix>
-<customtype>    /  terms                                  . <suffix>
-<customtype>    /  list                                   . <suffix>    <-- see note 4
-
 <type>          / <customlayout>        . <outputformat>  . <suffix>    <-- see note 1
 <type>          / <singular> . terms    . <outputformat>  . <suffix>
 <type>          /  terms                . <outputformat>  . <suffix>
 <type>          /  list                 . <outputformat>  . <suffix>
 
-<type>          / <customlayout>                          . <suffix>    <-- see note 1
+<type>          / <customlayout>                          . <suffix>    <-- see note 1, 6
 <type>          / <singular> . terms                      . <suffix>
 <type>          /  terms                                  . <suffix>
-<type>          /  list                                   . <suffix>
+<type>          /  list                                   . <suffix>    <-- see note 4
 
 taxonomy        / <customlayout>        . <outputformat>  . <suffix>
 taxonomy        / <singular> . terms    . <outputformat>  . <suffix>

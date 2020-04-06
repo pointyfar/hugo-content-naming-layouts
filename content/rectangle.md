@@ -14,11 +14,11 @@ type: {{< param "type">}}
 From higher priority to lower priority:
 
 ```
-<customtype>    /  single           . <outputformat> . <suffix>
-<customtype>    /  single                            . <suffix>  <-- this page example
+<type>    /  single           . <outputformat> . <suffix>
+<type>    /  single                            . <suffix>  <-- this page example
                   
-_default        /  single           . <outputformat> . <suffix>
-_default        /  single                            . <suffix>  <-- present, ignored
+_default  /  single           . <outputformat> . <suffix>
+_default  /  single                            . <suffix>  <-- present, ignored
 ```
 
 {{< back >}}

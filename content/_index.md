@@ -27,16 +27,6 @@ Scroll down for lookup rules for homepage.
 ### Lookup Rules for `homepage` `.Kind`:
 
 ```
-<customtype>    / <customlayout> . <outputformat> . <suffix>    
-<customtype>    /  index         . <outputformat> . <suffix>
-<customtype>    / <kind>         . <outputformat> . <suffix>
-<customtype>    /  list          . <outputformat> . <suffix>
-
-<customtype>    / <customlayout>                  . <suffix>    
-<customtype>    /  index                          . <suffix>
-<customtype>    / <kind>                          . <suffix>  <-- uncomment frontmatter line #1 (and/or #2)
-<customtype>    /  list                           . <suffix>
-
 <type>          / <customlayout> . <outputformat> . <suffix>
 <type>          /  index         . <outputformat> . <suffix>
 <type>          / <kind>         . <outputformat> . <suffix>
@@ -44,7 +34,7 @@ Scroll down for lookup rules for homepage.
 
 <type>          / <customlayout>                  . <suffix>  <-- uncomment frontmatter line #2
 <type>          /  index                          . <suffix>
-<type>          / <kind>                          . <suffix>
+<type>          / <kind>                          . <suffix>  <-- uncomment frontmatter line #1 (and/or #2)
 <type>          /  list                           . <suffix>
 
 

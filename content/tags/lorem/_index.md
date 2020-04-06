@@ -9,18 +9,6 @@ title: "Lorem"
 ---
 
 ```
-
-<customtype>    / <customlayout> . <outputformat>  . <suffix>
-<customtype>    / <singular>     . <outputformat>  . <suffix>
-<customtype>    /  taxonomy      . <outputformat>  . <suffix>
-<customtype>    /  list          . <outputformat>  . <suffix>
-
-<customtype>    / <customlayout>                   . <suffix>
-<customtype>    / <singular>                       . <suffix>
-<customtype>    /  taxonomy                        . <suffix>
-<customtype>    /  list                            . <suffix>   <-- see note 2
-
-
 <type>          / <customlayout> . <outputformat>  . <suffix>   <-- see note 1
 <type>          / <singular>     . <outputformat>  . <suffix>
 <type>          /  taxonomy      . <outputformat>  . <suffix>
@@ -29,7 +17,7 @@ title: "Lorem"
 <type>          / <customlayout>                   . <suffix>
 <type>          / <singular>                       . <suffix>
 <type>          /  taxonomy                        . <suffix>
-<type>          /  list                            . <suffix>
+<type>          /  list                            . <suffix>   <-- see note 2
 
 
 taxonomy        / <customlayout> . <outputformat>  . <suffix>

@@ -45,11 +45,6 @@ graph TD
 ---
 
 ```
-<customtype>    / <customlayout>    . <outputformat> . <suffix>
-<customtype>    /  single           . <outputformat> . <suffix>
-<customtype>    / <customlayout>                     . <suffix>
-<customtype>    /  single                            . <suffix>
-
 <type>          / <customlayout>    . <outputformat> . <suffix>
 <type>          /  single           . <outputformat> . <suffix>
 <type>          / <customlayout>                     . <suffix>
