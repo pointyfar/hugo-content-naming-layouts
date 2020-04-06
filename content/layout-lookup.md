@@ -28,8 +28,7 @@ Let's look at each page `.Kind` to see how the values of these parts are affecte
 
 2. `[directory]`: its value can be
     1. derived from `type`
-        - From the docs:
-            > Is value of `type` if set in front matter, else it the name of the root section (e.g. "blog"). It will always have a value, so if not set, the value is "page".
+        - From the docs[^type]
         - So in the case of the homepage, the value will be either what is set on the frontmatter, or `"page"`.
         
     1. `-`: For the homepage, the layout file can be located just below `layouts/`.
@@ -61,7 +60,7 @@ Items #1, #4, #5, #6 are the same for the below.
 `example.com/posts/`
 
 2. `[directory]`: its value can be
-    1. derived from `type`: see details in the docs
+    1. derived from `type`[^type]
     1. derived from `.Kind`: `"section"`
     1. `"_default"`: fallback
 
@@ -81,7 +80,7 @@ Items #1, #4, #5, #6 are the same for the below.
 
 
 2. `[directory]`: its value can be
-    1. derived from `type`: see details in the docs
+    1. derived from `type`[^type]
     1. `"_default"`: fallback
 
 3. `filename`: its value can be
@@ -99,7 +98,7 @@ tag = "tags"
 ```
 
 2. `[directory]`: its value can be
-    1. derived from `type`: see details in the docs
+    1. derived from `type`[^type]
     1. `"taxonomy"`: the actual string `"taxonomy"`
     1. derived from its singular form (eg `"tag"` for above configuration)
     1. `"_default"`: fallback
@@ -121,7 +120,7 @@ tag = "tags"
 ```
 
 2. `[directory]`: its value can be
-    1. derived from `type`: see details in the docs
+    1. derived from `type`[^type]
     1. `"taxonomy"`: the actual string `"taxonomy"`
     1. derived from the singular form of its term (eg `"tag"` for above configuration)
     1. `"_default"`: fallback
@@ -215,3 +214,5 @@ hugo server --config minconfig
 
 
 [^1]: unless cascaded from parent or otherwise configured.
+
+[^type]: [Docs](https://gohugo.io/templates/lookup-order/#hugo-layouts-lookup-rules): Is value of `type` if set in front matter, else it the name of the root section (e.g. "blog"). It will always have a value, so if not set, the value is "page". 
