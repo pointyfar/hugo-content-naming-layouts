@@ -6,37 +6,6 @@ Section pages
 
 [Docs reference](https://gohugo.io/templates/lookup-order/#examples-layout-lookup-for-section-pages)
 
-{{<mermaid>}}
-graph TD
-    A("content/lorem/_index.md") --> B
-    
-    B{Type Set}
-    B --- By[Yes]
-          By --> ctype("layouts/customtype/**.html")
-    
-
-    B --- Bn[No]
-          Bn --> C{"Layout set"}
-
-    C --- Cy[Yes]
-          Cy --> pcl("layouts/**/customlayout.html")
-
-
-    C --- Cn[No]
-          Cn --> Default("** See list below **")
-    
-
-    classDef thick stroke-width:4px, stroke:#91C7B1;
-    class Default,pcl,dcl,ctype,Both thick;
-
-    style A stroke-width:4px, stroke:#6153CC;
-
-
-
-{{</mermaid>}}
-
----
-
 ```
 <customtype>    / <customlayout>    . <outputformat>  . <suffix>
 <customtype>    / <section>         . <outputformat>  . <suffix>

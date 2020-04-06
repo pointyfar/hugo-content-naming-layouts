@@ -20,7 +20,7 @@ on the right to expand info panel.
 
 Scroll down for lookup rules for homepage.
 
-<div style="height:300px;"></div>
+<div style="height:400px;"></div>
 
 ---
 

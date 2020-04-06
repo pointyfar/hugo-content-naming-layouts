@@ -71,7 +71,16 @@ It's a similar flowchart even for nested pages, for example a page at `yoursite.
 
 ## On Hugo's Layout Lookup Order
 
+Looking at the extensive list of examples in the docs might be a bit overwhelming to new Hugo users, but it is not that complicated once we break it down.
 
+Layout files are generally in the pattern:
+
+```
+    1            2           3         4           5             6
+layoutDir / [directory] / filename . [lang] . [outputformat] . suffix
+```
+
+Read more details inside.
 
 
 ## See in action
