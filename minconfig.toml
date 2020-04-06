@@ -1,0 +1,22 @@
+baseURL = "https://cocky-aryabhata-833924.netlify.com/"
+languageCode = "en-us"
+title = "My New Hugo Site"
+relativeURLs = true
+
+layoutDir = "minlayout"
+
+
+
+
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.extensions]
+      footnote = true
+
+[taxonomies]
+  category = "categories"
+  taxo = "taxos"
+  tag = "tags"

@@ -1,0 +1,20 @@
+{{ with .Parent }}
+  {{ with .Sections }}
+  <h3>Sibling Sections <code>(.Parent.Sections)</code></h3>
+  <table class="table is-hoverable is-bordered is-striped">
+    <tbody>
+      <thead><tr><th>Page</th><th>Title</th><th>File</th></tr></thead>
+      {{ range . }}
+      <tr>
+        <td>{{.}}</td>
+        <td><a href="{{.Permalink}}">{{.Title}}</a></td>
+        <td>{{with .File}}{{.}}{{end}}</td>
+      </tr>
+      {{ end }}
+    </tbody>
+  </table>
+  {{ end }}
+{{ else }}
+<h3>No Sibling Sections <code>(.Parent.Sections)</code></h3>
+{{ end }}
+<hr>

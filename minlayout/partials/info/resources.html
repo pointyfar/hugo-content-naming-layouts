@@ -1,0 +1,24 @@
+<table class="table is-hoverable is-bordered is-striped">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Resource</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{ range .Resources }}
+    <tr>
+      <td>{{.ResourceType}}</td>
+      <td>
+        {{if eq .ResourceType "image" }}
+        <img src="{{.Permalink |safeHTMLAttr}}">
+        {{ else if eq .ResourceType "page"}}
+        {{.Content}}
+        {{ else }}
+        <a href="{{.Permalink |safeHTMLAttr}}">{{.Name}}</a>
+        {{ end }}
+      </td>
+    </tr>
+    {{ end }}
+  </tbody>
+</table>

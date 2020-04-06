@@ -1,0 +1,49 @@
+<hr>
+<h4>
+    From: <code>themes/theme/shortcodes/blackberry.html</code>
+</h4>
+
+{{ with .Page.Resources }}
+    <hr>
+    <h3>Page Resources:</h3>
+    {{ range . }}
+    <table class="table is-hoverable is-bordered is-striped">
+        <tbody>
+            <tr>
+                <td>Type</td>
+                <td>{{.ResourceType}}</td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>{{.Name}}</td>
+            </tr>
+            <tr>
+                <td>Permalink</td>
+                <td><a href="{{.Permalink |safeHTMLAttr}}">{{.Permalink}}</a></td>
+            </tr>
+            <tr>
+                <td>RelPermalink</td>
+                <td><a href="{{.RelPermalink |safeHTMLAttr}}">{{.RelPermalink}}</a></td>
+            </tr>
+            <tr>
+                <td>Title</td>
+                <td>{{.Title}}</td>
+            </tr>
+            {{ with .Params }}
+            <tr>
+                <th colspan="2">.Params :</th>
+            </tr>
+            {{ range $k, $v := . }}
+
+            <tr>
+                <td>.Params.{{$k}}</td>
+                <td>{{$v}}</td>
+            </tr>
+            {{ end }}
+            {{ end }}
+        </tbody>
+    </table>
+    <hr>
+    {{ end }}
+
+{{ end }}

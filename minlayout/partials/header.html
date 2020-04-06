@@ -1,0 +1,40 @@
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        {{.Title}} / Hugo Version {{hugo.Version}}
+      </h1>
+      <h2 class="subtitle">
+        Using layout: {{.Scratch.Get "layout"}}
+      </h2>
+      
+      Breadcrumb navigation:
+      <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+          {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
+        </ul>
+      </nav>
+
+      {{$page := .}}
+      {{ with .OutputFormats }}
+      Output Formats for  <code>{{$page}}</code>:
+      <ul class="info-outputs">
+        {{ range . -}}
+        <li><a href="{{ .Permalink | safeURL }}">{{.Name}}</a></li> 
+        {{ end -}}
+      </ul>
+      {{ end }}
+      
+    </div>
+  </div>
+</section>
+{{ define "breadcrumbnav" }}
+{{ if .p1.Parent }}
+{{ template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 )  }}
+{{ else if not .p1.IsHome }}
+{{ template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 )  }}
+{{ end }}
+<li {{ if eq .p1 .p2 }} class="active"{{ end }}>
+  <a href="{{ .p1.Permalink }}">{{ .p1.Title }}</a>
+</li>
+{{ end }}

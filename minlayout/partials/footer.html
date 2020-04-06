@@ -1,0 +1,25 @@
+{{ if .HasShortcode "mermaid" }}
+<script 
+  async
+  type="text/javascript" 
+  src="//unpkg.com/mermaid@8.4.4/dist/mermaid.js">
+</script>
+<script>
+
+  window.onload = function() {
+    
+    mermaid.initialize(
+      {
+        startOnLoad: true,
+        width: "100%",
+        theme: "neutral",
+        flowchart:{
+          curve:"linear"
+        },
+      }
+      );
+
+  };
+
+</script>
+{{ end }}

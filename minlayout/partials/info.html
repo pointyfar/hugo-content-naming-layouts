@@ -1,0 +1,87 @@
+<h3>Some Page Vars</h3>
+
+<table class="table is-hoverable is-bordered is-striped">
+  <tbody>
+    {{ partial "tr" (  slice "DOT (.)" .) }}
+    {{ $file := ""}}{{ with .File }}{{$file = .}}{{ end }}
+    {{ partial "tr" (  slice ".File" $file) }}
+
+    {{ partial "tr" (  slice ".Kind" .Kind) }}
+    {{ partial "tr" (  slice ".Type" .Type) }}
+    {{ partial "tr" (  slice ".Section" .Section) }}
+    {{ partial "tr" (  slice ".Sections" (delimit .Sections ", ")) }}
+    
+    {{ partial "tr" (  slice ".Parent" .Parent) }}
+    
+    {{ partial "tr" (  slice ".IsPage" .IsPage) }}
+    {{ partial "tr" (  slice ".IsNode" .IsNode) }}
+    {{ partial "tr" (  slice ".Pages" (delimit .Pages ", ")) }}
+    {{ $hasresources := false }}{{ with .Resources }}{{ $hasresources = true }}{{ end }}
+    {{ partial "tr" (  slice ".Resources" $hasresources) }}
+  </tbody>
+</table>
+
+<!-- -------------------- SHOW SITE STRUCTURE --------------------------- -->
+
+{{ partial "info/structure.html" . }}
+
+
+<!-- -------------------- SHOW PARENT SECTIONS --------------------------- -->
+
+{{ $showparentsections := true }}
+{{ with site.Params.showinfo.parentsections }}
+{{ if ne true . }}{{ $showparentsections = false }}{{ end }}
+{{ end }}
+
+{{ if eq true $showparentsections }}
+{{ partial "info/parent-sections.html" . }}
+{{ end }}
+
+
+<!-- -------------------- SHOW SECTIONS --------------------------- -->
+
+{{ $showsections := true }}
+{{ with site.Params.showinfo.sections }}
+{{ if ne true . }}{{ $showsections = false }}{{ end }}
+{{ end }}
+
+{{ if eq true $showsections }}
+{{ partial "info/sections.html" . }}
+{{ end }}
+
+<!-- -------------------- SHOW PAGES --------------------------- -->
+
+{{ $showpages := true }}
+{{ with site.Params.showinfo.pages }}
+{{ if ne true .pages }}{{ $showpages = false }}{{ end }}
+{{ end }}
+
+{{ if eq true $showpages }}
+{{ partial "info/pages.html" . }}
+{{ end }}
+
+<!-- -------------------- SHOW REGULAR PAGES --------------------------- -->
+{{ $showregularpages := true }}
+{{ with site.Params.showinfo.regularpages }}
+{{ if ne true . }}{{ $showregularpages = false }}{{ end }}
+{{ end }}
+
+{{ if eq true $showregularpages }}
+{{ partial "info/regularpages.html" . }}
+{{ end }}
+
+
+<!-- -------------------- SHOW RESOURCES --------------------------- -->
+{{ $showresources := true }}
+{{ with site.Params.showinfo.resources }}
+{{ if ne true . }}{{ $showresources = false }}{{ end }}
+{{ end }}
+
+{{ if eq true $showresources }}
+{{ if $hasresources }}
+  <h3>Resources</h3>
+  {{ partial "info/resources.html" . }}
+{{ else }}
+  <h3>No Page Resources</h3>
+{{ end }}
+{{ end }}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    {{- partial "head.html" . -}}
+    <body class="">
+      {{.Scratch.Set "layout" "minlayout/_default/single.html"}}
+      {{- partial "header.html" . -}}
+      <div class="container-fluid">
+        <div class="content main-content">
+          {{ block "main" . }}
+              <div class="card">
+                <div class="card-content">
+                    <h2>{{.Title}}</h2>
+                    {{ .Content }}
+                </div>
+              </div>
+          {{ end }}
+          {{ block "info" . }}
+          {{ partial "panel.html" . }}
+          {{ end }}
+
+          
+        </div>
+      </div>
+        {{- partial "footer.html" . -}}
+    </body>
+</html>
