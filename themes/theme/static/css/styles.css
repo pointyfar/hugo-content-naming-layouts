@@ -70,7 +70,21 @@ div.mermaid {
   list-style: lower-roman;
 }
 
-.info-panel-icon-wrapper {
+.content li ol,
+.content li ul
+{
+  margin-top: 0;
+}
+
+.content li {
+  margin: 0.5rem;
+  margin-bottom: 1rem;;
+}
+
+
+
+
+.togglebtn-wrapper {
   background-color: #9A348E;
   border-radius: 15px 0 0 15px;
   border-right: 0;
@@ -78,28 +92,87 @@ div.mermaid {
   
   position: fixed;
   top: 200px;
-  right: 450px;
+  right: 0px;
   z-index: 200;
   margin: 15px 0 10px 0;
   transition: all .5s ease;
-}
 
-.info-panel-icon-closed {
-  right: 0;
+  width: 60px;
+  height: 60px;
+
   
 }
-.info-panel-icon-closed .info-panel-icon {
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
+
+
+.togglebtn-wrapper.open {
+  right: 450px;
 }
 
-.info-panel-icon {
-  transition: transform 1s ease;
-  font-size: 40px;
-  color: #EEEEEE;
-  width: 50px;
-  
+
+.togglebtn {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: 8px;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
+.togglebtn .toggleicon {
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  position: absolute;
+  top: 25px;
+}
+.togglebtn .toggleicon:before {
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  position: absolute;
+  width: 40px;
+  height: 10px;
+  background-color: #FFF;
+  content: "";
+  top: -7px;
+
+
+  -webkit-transform: rotateZ(-45deg) scaleX(0.75);
+          transform: rotateZ(-45deg) scaleX(0.75);
+}
+.togglebtn .toggleicon:after {
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  position: absolute;
+  width: 40px;
+  height: 10px;
+  background-color: #FFF;
+  content: "";
+  top: 7px;
+
+  -webkit-transform: rotateZ(45deg) scaleX(0.75) ;
+          transform: rotateZ(45deg) scaleX(0.75) ;
+}
+.togglebtn.open .toggleicon {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.togglebtn.open .toggleicon:before {
+  -webkit-transform: rotateZ(45deg) scaleX(0.75) ;
+          transform: rotateZ(45deg) scaleX(0.75) ;
+}
+.togglebtn.open .toggleicon:after {
+  -webkit-transform: rotateZ(-45deg) scaleX(0.75);
+          transform: rotateZ(-45deg) scaleX(0.75);
+}
+.togglebtn:hover {
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
 
 
 
