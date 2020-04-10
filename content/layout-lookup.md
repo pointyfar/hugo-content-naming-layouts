@@ -17,8 +17,15 @@ layoutDir / [directory] / filename . [lang] . [outputformat] . suffix
 
 ---
 
-Let's look at each page `.Kind` to see how the values of these parts are affected.
+Let's look at each page `.Kind` to see how the values of these parts are affected:
 
+- [`home`](#home)
+- [`section`](#section)
+- [`page`](#page)
+- [`taxonomyTerm`](#taxonomyTerm)
+- [`taxonomy`](#taxonomy)
+
+---
 
 ### `home`
 
@@ -27,12 +34,12 @@ Let's look at each page `.Kind` to see how the values of these parts are affecte
 1. `layoutDir`: By default, the value is `layouts`. You can configure this value, but for the examples we will assume this default value is used.
 
 2. `[directory]`: its value can be
-    1. derived from `type`
+    1. derived from `.Type`
         - From the docs[^type]
         - So in the case of the homepage, the value will be either what is set on the frontmatter, or `"page"`.
         
     1. `-`: For the homepage, the layout file can be located just below `layouts/`.
-    1. `"_default"`: fallback
+    1. `"_default"`: default
 
 3. `filename`: its value can be
     1. derived from `layout` set in the frontmatter.
@@ -60,9 +67,9 @@ Items #1, #4, #5, #6 are the same for the below.
 `example.com/posts/`
 
 2. `[directory]`: its value can be
-    1. derived from `type`[^type]
+    1. derived from `.Type`[^type]
     1. derived from `.Kind`: `"section"`
-    1. `"_default"`: fallback
+    1. `"_default"`: default
 
 3. `filename`: its value can be
     1. derived from `layout` set in the frontmatter.
@@ -71,6 +78,7 @@ Items #1, #4, #5, #6 are the same for the below.
     1. derived from `.Kind`: `"section"`. Not to be confused with 3.b, this is the actual string `"section"`.
     1. `"list"`: default
 
+See [`home`](#home) above for #1, #4, #5, #6
 
 ---
 
@@ -80,12 +88,14 @@ Items #1, #4, #5, #6 are the same for the below.
 
 
 2. `[directory]`: its value can be
-    1. derived from `type`[^type]
-    1. `"_default"`: fallback
+    1. derived from `.Type`[^type]
+    1. `"_default"`: default
 
 3. `filename`: its value can be
     1. derived from `layout` set in the frontmatter.
     1. `"single"`: default
+
+See [`home`](#home) above for #1, #4, #5, #6
 
 ---
 
@@ -98,16 +108,18 @@ tag = "tags"
 ```
 
 2. `[directory]`: its value can be
-    1. derived from `type`[^type]
+    1. derived from `.Type`[^type]
     1. `"taxonomy"`: the actual string `"taxonomy"`
     1. derived from its singular form (eg `"tag"` for above configuration)
-    1. `"_default"`: fallback
+    1. `"_default"`: default
 
 3. `filename`: its value can be
     1. derived from `layout` set in the frontmatter.
     1. derived from `<singular> . terms` (eg `"tag.terms"` for above config)
     1. `"terms"`: the string `"terms"`
     1. `"list"`: default
+
+See [`home`](#home) above for #1, #4, #5, #6
 
 ---
 
@@ -120,10 +132,10 @@ tag = "tags"
 ```
 
 2. `[directory]`: its value can be
-    1. derived from `type`[^type]
+    1. derived from `.Type`[^type]
     1. `"taxonomy"`: the actual string `"taxonomy"`
     1. derived from the singular form of its term (eg `"tag"` for above configuration)
-    1. `"_default"`: fallback
+    1. `"_default"`: default
 
 3. `filename`: its value can be
     1. derived from `layout` set in the frontmatter.
@@ -131,6 +143,7 @@ tag = "tags"
     1. `"taxonomy"`: the string `"taxonomy"`
     1. `"list"`: default
 
+See [`home`](#home) above for #1, #4, #5, #6
 
 ---
 
@@ -180,8 +193,9 @@ on the right to expand the info panel to see these values.
 ### Minimum example
 
 Hugo can generate your entire site with just two template files:
-    - `_default/list.html`
-    - `_default/single.html`
+
+- `_default/list.html`
+- `_default/single.html`
 
 You can see this in action by running Hugo with the included `minconfig.toml` configuration:
 
@@ -189,20 +203,39 @@ You can see this in action by running Hugo with the included `minconfig.toml` co
 hugo server --config minconfig
 ```
 
-### Extra scenarios
+### Multilingual example
 
-- Section `lorem/_index.md` has `customtype`
-    - child pages `lorem/ipsum.md` will have `.Type` = `lorem` [^1]
 
-        See examples:
-        - [`content/fruit/_index.md`](/fruit/): `type: customtype` => `.Type` = `customtype`
-        - [`content/fruit/banana.md`](/fruit/banana): `.Type` = `fruit`
+This site is configured multilingual [by content directory](https://gohugo.io/content-management/multilingual/#translation-by-content-directory), 
+with English being the default language and [Latin](/la/) a second one. Latin content files are under the `/lorem/` content directory.
 
-    - child section `lorem/ipsum/_index.md` will have `.Type` = `lorem` [^1]
+[`/metals/`](/metals/) and [`/la/metals/`](/la/metals/) both have `layout: customlayout` in their frontmatter. 
 
-        See examples:
-        - [`content/fruit/_index.md`](/fruit/): `type: customtype` => `.Type` = `customtype`
-        - [`content/fruit/berries/_index.md`](/fruit/berries/): `.Type` = `fruit`
+- [`/metals/`](/metals/) uses `layouts/metals/customlayout.html` (`<type> / <customlayout> . <suffix>`)
+- [`/la/metals/`](/la/metals/) uses `layouts/metals/customlayout.la.html` (`<type> / <customlayout> . <lang> . <suffix>`)
+
+
+
+### Extra examples
+
+- Section `lorem/_index.md` has `customtype`. 
+    - What layout will children pages / sections use?
+        - child pages `lorem/ipsum.md` will have `.Type` = `lorem` [^1]
+
+            See examples:
+            - [`content/fruit/_index.md`](/fruit/): `type: customtype` => `.Type` = `customtype`
+            - [`content/fruit/banana.md`](/fruit/banana): `.Type` = `fruit`
+
+        - child section `lorem/ipsum/_index.md` will have `.Type` = `lorem` [^1]
+
+            See examples:
+            - [`content/fruit/_index.md`](/fruit/): `type: customtype` => `.Type` = `customtype`
+            - [`content/fruit/berries/_index.md`](/fruit/berries/): `.Type` = `fruit`
+    - How do I make children pages / sections also have `customtype` `type`?
+        - Use [`cascade`](https://gohugo.io/content-management/front-matter#front-matter-cascade) in the frontmatter to make the child pages inherit the same value.
+        Alternatively, set the `type` of each content you want `customtype` to apply to. 
+
+            Try the `cascade` option by renaming the frontmatter of `content/fruit/_index.md` from `x_cascade:` to `cascade:`.
     
 
 - Section `lorem/_index.md` has `customlayout`
@@ -211,8 +244,14 @@ hugo server --config minconfig
         See examples:
         - [`content/metals/_index.md`](/metals/): `layout: customlayout` => layout = `metals/customlayout.html`
         - [`content/metals/gold.md`](/metals/gold/): layout = `_default/single.html`
+    - Similar to the above, you can `cascade` the `layout` frontmatter so the child pages inherit the same value. Otherwise, you can set the value to each content individually.
 
+        Try the `cascade` option by renaming the frontmatter of `content/fruit/_index.md` from `x_cascade:` to `cascade:`.
+
+---
+
+Notes:
 
 [^1]: unless cascaded from parent or otherwise configured.
 
-[^type]: [Docs](https://gohugo.io/templates/lookup-order/#hugo-layouts-lookup-rules): Is value of `type` if set in front matter, else it the name of the root section (e.g. "blog"). It will always have a value, so if not set, the value is "page". 
+[^type]: From the [docs](https://gohugo.io/templates/lookup-order/#hugo-layouts-lookup-rules): Is value of `type` if set in front matter, else it the name of the root section (e.g. "blog"). It will always have a value, so if not set, the value is "page". 
