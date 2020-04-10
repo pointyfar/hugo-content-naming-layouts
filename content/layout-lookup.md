@@ -22,7 +22,7 @@ Let's look at each page `.Kind` to see how the values of these parts are affecte
 - [`home`](#home)
 - [`section`](#section)
 - [`page`](#page)
-- [`taxonomyTerm`](#taxonomyTerm)
+- [`taxonomyTerm`](#taxonomyterm)
 - [`taxonomy`](#taxonomy)
 
 ---
