@@ -16,3 +16,13 @@ theme = "theme"
   category = "categories"
   taxo = "taxos"
   tag = "tags"
+
+[languages]
+  [languages.en]
+    contentDir = "content"
+    languageName = "English"
+    weight = 10
+  [languages.la]
+    contentDir = "lorem"
+    languageName = "Latin"
+    weight = 20
