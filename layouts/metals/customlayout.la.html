@@ -1,0 +1,18 @@
+{{ define "set-layout" }}
+{{.Scratch.Set "layout" "layouts/page/customlayout.la.html"}}
+{{ end }}
+{{ define "main" }}
+<div class="card">
+    <div class="card-content">
+        <h2>{{.Title}}</h2>
+        {{ with .Content }}
+            {{.}}
+        {{ else }}
+        {{ $f := print .File }}
+        {{ with.Sites.First.GetPage $f }}
+            {{.Content}}
+        {{ end }}
+        {{end}}
+    </div>
+</div>
+{{ end }}

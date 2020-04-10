@@ -7,7 +7,16 @@
       <h2 class="subtitle">
         Using layout: {{.Scratch.Get "layout"}}
       </h2>
-      
+      {{ if .IsTranslated }}
+      <div>
+        <p>Other Languages:</p>
+        {{ range .Translations }}
+        <a href="{{ .Permalink }}" title="{{ .Language.LanguageName }}"> {{.Language}} </a>
+        {{ end }}
+      </div>
+      <br>
+      {{ end }}
+
       Breadcrumb navigation:
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
