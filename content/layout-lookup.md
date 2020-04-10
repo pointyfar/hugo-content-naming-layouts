@@ -4,6 +4,9 @@ title: "Layout Lookup Order"
 
 [Docs ref](https://gohugo.io/templates/lookup-order/)
 
+{{< toc >}}
+
+---
 
 Looking at the extensive list of examples in the docs might be a bit overwhelming to new Hugo users, but it is not that complicated once we break it down.
 
@@ -19,13 +22,7 @@ layoutDir / [directory] / filename . [lang] . [outputformat] . suffix
 
 Let's look at each page `.Kind` to see how the values of these parts are affected:
 
-- [`home`](#home)
-- [`section`](#section)
-- [`page`](#page)
-- [`taxonomyTerm`](#taxonomyterm)
-- [`taxonomy`](#taxonomy)
-
----
+## Template Lookup by `.Kind`
 
 ### `home`
 
@@ -147,7 +144,7 @@ See [`home`](#home) above for #1, #4, #5, #6
 
 ---
 
-### Some examples
+## Some examples
 
 Below are some examples of the effects of values of the above criteria on the layout template used.
 
@@ -190,7 +187,7 @@ on the right to expand the info panel to see these values.
     - [single page with `amp` output format](/amp/circle/) #2
 
 
-### Minimum example
+## Minimum example
 
 Hugo can generate your entire site with just two template files:
 
@@ -203,7 +200,7 @@ You can see this in action by running Hugo with the included `minconfig.toml` co
 hugo server --config minconfig
 ```
 
-### Multilingual example
+## Multilingual example
 
 
 This site is configured multilingual [by content directory](https://gohugo.io/content-management/multilingual/#translation-by-content-directory), 
@@ -216,7 +213,7 @@ with English being the default language and [Latin](/la/) a second one. Latin co
 
 
 
-### Extra examples
+## Extra examples
 
 - Section `lorem/_index.md` has `customtype`. 
     - What layout will children pages / sections use?
