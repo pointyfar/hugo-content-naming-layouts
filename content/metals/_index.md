@@ -4,6 +4,10 @@ layout: customlayout
 outputs:
 - json
 - html
+
+x_cascade:
+    layout: customlayout
+
 ---
 
 Frontmatter: 
