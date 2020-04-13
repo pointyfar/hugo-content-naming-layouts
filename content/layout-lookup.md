@@ -30,7 +30,7 @@ Let's look at each page `.Kind` to see how the values of these parts are affecte
 
 1. `layoutDir`: By default, the value is `layouts`. You can configure this value, but for the examples we will assume this default value is used.
 
-2. `[directory]`: its value can be
+2. `[directory]`: its value can be (with highest priority on top)
     1. derived from `.Type`
         - From the docs[^type]
         - So in the case of the homepage, the value will be either what is set on the frontmatter, or `"page"`.
@@ -38,7 +38,7 @@ Let's look at each page `.Kind` to see how the values of these parts are affecte
     1. `-`: For the homepage, the layout file can be located just below `layouts/`.
     1. `"_default"`: default
 
-3. `filename`: its value can be
+3. `filename`: its value can be (with highest priority on top)
     1. derived from `layout` set in the frontmatter.
     1. `"index"`
     1. derived from the value of `.Kind`: `"home"`
@@ -48,14 +48,14 @@ Let's look at each page `.Kind` to see how the values of these parts are affecte
     1. language code, eg `"en"`, `"fr"`, etc.
 
 5. `[outputformat]`
-    1. the output format name (eg `"amp"`)
+    1. the output format name (eg `"amp"`) [^outputformat]
 
 6. `suffix`
-    1. the output format suffix (eg `"html"`)
+    1. the output format suffix (eg `"html"`) [^outputformat]
 
 ---
 
-Items #1, #4, #5, #6 are the same for the below.
+Items #1, #4, #5, #6 are the same for `.Kind`s below.
 
 ---
 
@@ -75,7 +75,7 @@ Items #1, #4, #5, #6 are the same for the below.
     1. derived from `.Kind`: `"section"`. Not to be confused with 3.b, this is the actual string `"section"`.
     1. `"list"`: default
 
-See [`home`](#home) above for #1, #4, #5, #6
+See [above](#home) for #1, #4, #5, #6
 
 ---
 
@@ -92,7 +92,7 @@ See [`home`](#home) above for #1, #4, #5, #6
     1. derived from `layout` set in the frontmatter.
     1. `"single"`: default
 
-See [`home`](#home) above for #1, #4, #5, #6
+See [above](#home) for #1, #4, #5, #6
 
 ---
 
@@ -116,7 +116,7 @@ tag = "tags"
     1. `"terms"`: the string `"terms"`
     1. `"list"`: default
 
-See [`home`](#home) above for #1, #4, #5, #6
+See [above](#home) for #1, #4, #5, #6
 
 ---
 
@@ -140,7 +140,7 @@ tag = "tags"
     1. `"taxonomy"`: the string `"taxonomy"`
     1. `"list"`: default
 
-See [`home`](#home) above for #1, #4, #5, #6
+See [above](#home) for #1, #4, #5, #6
 
 ---
 
@@ -248,6 +248,8 @@ with English being the default language and [Latin](/la/) a second one. Latin co
 ---
 
 Notes:
+
+[^outputformat]: See [docs](https://gohugo.io/templates/output-formats)
 
 [^1]: unless cascaded from parent or otherwise configured.
 
