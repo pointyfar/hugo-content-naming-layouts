@@ -7,41 +7,28 @@ Section pages
 [Docs reference](https://gohugo.io/templates/lookup-order/#examples-layout-lookup-for-section-pages)
 
 ```
-<type>          / <customlayout>    . <outputformat>  . <suffix>
-<type>          / <section>         . <outputformat>  . <suffix>
-<type>          / <kind>            . <outputformat>  . <suffix>
-<type>          /  list             . <outputformat>  . <suffix>  <-- see note 3
+[directory]     / filename          .  [<lang>] . [<outputformat>] . suffix
 
-<type>          / <customlayout>                      . <suffix>  <-- see note 1, 3
-<type>          / <section>                           . <suffix>  <-- see note 2
-<type>          / <kind>                              . <suffix>
-<type>          /  list                               . <suffix>  <-- see note 2, 4
+<type>          / <customlayout>    .  [<lang>] . [<outputformat>] . <suffix>  <-- see note 1, 3
+<type>          / <section>         .  [<lang>] . [<outputformat>] . <suffix>  <-- see note 2
+<type>          / <kind>            .  [<lang>] . [<outputformat>] . <suffix>
+<type>          /  list             .  [<lang>] . [<outputformat>] . <suffix>  <-- see note 2, 3, 4
 
-<kind>          / <customlayout>    . <outputformat>  . <suffix>
-<kind>          / <section>         . <outputformat>  . <suffix>
-<kind>          / <kind>            . <outputformat>  . <suffix>
-<kind>          /  list             . <outputformat>  . <suffix>
+<kind>          / <customlayout>    .  [<lang>] . [<outputformat>] . <suffix>
+<kind>          / <section>         .  [<lang>] . [<outputformat>] . <suffix>
+<kind>          / <kind>            .  [<lang>] . [<outputformat>] . <suffix>
+<kind>          /  list             .  [<lang>] . [<outputformat>] . <suffix>
 
-<kind>          / <type>                              . <suffix>
-<kind>          / <section>                           . <suffix>
-<kind>          / <kind>                              . <suffix>
-<kind>          /  list                               . <suffix>
-
-_default        / <customlayout>    . <outputformat>  . <suffix>
-_default        / <section>         . <outputformat>  . <suffix>
-_default        / <kind>            . <outputformat>  . <suffix>
-_default        /  list             . <outputformat>  . <suffix>
-
-_default        / <customlayout>                      . <suffix>
-_default        / <section>                           . <suffix>
-_default        / <kind>                              . <suffix>
-_default        /  list                               . <suffix>  <-- note 5
+_default        / <customlayout>    .  [<lang>] . [<outputformat>] . <suffix>
+_default        / <section>         .  [<lang>] . [<outputformat>] . <suffix>
+_default        / <kind>            .  [<lang>] . [<outputformat>] . <suffix>
+_default        /  list             .  [<lang>] . [<outputformat>] . <suffix>  <-- note 5
 
 ```
 
 Notes:
 
-1. [`content/colors/_index.md`](/colors/) has both type and layout specified. 
+1. [`content/colors/_index.md`](/colors/) has both type and layout specified. However, no `customtype/customlayout.html` is found.
 ```
 <customtype> / list . <suffix> => customtype/list.html
 ```

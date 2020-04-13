@@ -10,15 +10,13 @@ Single page under a Section
 [Docs reference](https://gohugo.io/templates/lookup-order/#examples-layout-lookup-for-regular-pages)
 
 ```
-<type>          / <customlayout>    . <outputformat> . <suffix>
-<type>          /  single           . <outputformat> . <suffix>
-<type>          / <customlayout>                     . <suffix>  <-- #2, #4
-<type>          /  single                            . <suffix>  <-- #3, #1
+[directory] / filename       .  [<lang>] . [<outputformat>] . suffix
+
+<type>          / <customlayout>    .  [<lang>] . [<outputformat>] . <suffix>  <-- #2, #4
+<type>          /  single           .  [<lang>] . [<outputformat>] . <suffix>  <-- #3, #1
                   
-_default        / <customlayout>    . <outputformat> . <suffix>
-_default        /  single           . <outputformat> . <suffix>
-_default        / <customlayout>                     . <suffix>  
-_default        /  single                            . <suffix>  <-- #5
+_default        / <customlayout>    .  [<lang>] . [<outputformat>] . <suffix>
+_default        /  single           .  [<lang>] . [<outputformat>] . <suffix>  <-- #5
 
 ```
 

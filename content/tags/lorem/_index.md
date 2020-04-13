@@ -9,48 +9,27 @@ title: "Lorem"
 ---
 
 ```
-<type>          / <customlayout> . <outputformat>  . <suffix>   <-- see note 1
-<type>          / <singular>     . <outputformat>  . <suffix>
-<type>          /  taxonomy      . <outputformat>  . <suffix>
-<type>          /  list          . <outputformat>  . <suffix>
+[directory]     / filename       .  [<lang>] . [<outputformat>] . suffix
 
-<type>          / <customlayout>                   . <suffix>
-<type>          / <singular>                       . <suffix>
-<type>          /  taxonomy                        . <suffix>
-<type>          /  list                            . <suffix>   <-- see note 2
+<type>          / <customlayout> .  [<lang>] . [<outputformat>] . <suffix>   <-- see note 1
+<type>          / <singular>     .  [<lang>] . [<outputformat>] . <suffix>
+<type>          /  taxonomy      .  [<lang>] . [<outputformat>] . <suffix>
+<type>          /  list          .  [<lang>] . [<outputformat>] . <suffix>   <-- see note 2
 
+taxonomy        / <customlayout> .  [<lang>] . [<outputformat>] . <suffix>
+taxonomy        / <singular>     .  [<lang>] . [<outputformat>] . <suffix>
+taxonomy        /  taxonomy      .  [<lang>] . [<outputformat>] . <suffix>
+taxonomy        /  list          .  [<lang>] . [<outputformat>] . <suffix>
 
-taxonomy        / <customlayout> . <outputformat>  . <suffix>
-taxonomy        / <singular>     . <outputformat>  . <suffix>
-taxonomy        /  taxonomy      . <outputformat>  . <suffix>
-taxonomy        /  list          . <outputformat>  . <suffix>
+<singular>      / <customlayout> .  [<lang>] . [<outputformat>] . <suffix>
+<singular>      / <singular>     .  [<lang>] . [<outputformat>] . <suffix>
+<singular>      /  taxonomy      .  [<lang>] . [<outputformat>] . <suffix>
+<singular>      /  list          .  [<lang>] . [<outputformat>] . <suffix>   <-- see note 6
 
-taxonomy        / <customlayout>                   . <suffix>
-taxonomy        / <singular>                       . <suffix>
-taxonomy        /  taxonomy                        . <suffix>
-taxonomy        /  list                            . <suffix>
-
-
-<singular>      / <customlayout> . <outputformat>  . <suffix>
-<singular>      / <singular>     . <outputformat>  . <suffix>
-<singular>      /  taxonomy      . <outputformat>  . <suffix>
-<singular>      /  list          . <outputformat>  . <suffix>
-
-<singular>      / <customlayout>                   . <suffix>
-<singular>      / <singular>                       . <suffix>
-<singular>      /  taxonomy                        . <suffix>
-<singular>      /  list                            . <suffix>   <-- see note 6
-
-
-_default        / <customlayout> . <outputformat>  . <suffix>
-_default        / <singular>     . <outputformat>  . <suffix>
-_default        /  taxonomy      . <outputformat>  . <suffix>
-_default        /  list          . <outputformat>  . <suffix>
-
-_default        / <customlayout>                   . <suffix>   <-- see note 3
-_default        / <singular>                       . <suffix>
-_default        /  taxonomy                        . <suffix>   <-- see note 4
-_default        /  list                            . <suffix>   <-- see note 5
+_default        / <customlayout> .  [<lang>] . [<outputformat>] . <suffix>   <-- see note 3
+_default        / <singular>     .  [<lang>] . [<outputformat>] . <suffix>
+_default        /  taxonomy      .  [<lang>] . [<outputformat>] . <suffix>   <-- see note 4
+_default        /  list          .  [<lang>] . [<outputformat>] . <suffix>   <-- see note 5
 
 ```
 

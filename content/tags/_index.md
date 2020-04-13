@@ -14,45 +14,27 @@ outputs:
 From the highest priority to the lowest:
 
 ```
-<type>          / <customlayout>        . <outputformat>  . <suffix>    <-- see note 1
-<type>          / <singular> . terms    . <outputformat>  . <suffix>
-<type>          /  terms                . <outputformat>  . <suffix>
-<type>          /  list                 . <outputformat>  . <suffix>
+[directory]     / filename              .  [<lang>] . [<outputformat>] . suffix
 
-<type>          / <customlayout>                          . <suffix>    <-- see note 1, 6
-<type>          / <singular> . terms                      . <suffix>
-<type>          /  terms                                  . <suffix>
-<type>          /  list                                   . <suffix>    <-- see note 4
+<type>          / <customlayout>        .  [<lang>] . [<outputformat>] . <suffix>    <-- see note 1, 6
+<type>          / <singular> . terms    .  [<lang>] . [<outputformat>] . <suffix>
+<type>          /  terms                .  [<lang>] . [<outputformat>] . <suffix>
+<type>          /  list                 .  [<lang>] . [<outputformat>] . <suffix>    <-- see note 4
 
-taxonomy        / <customlayout>        . <outputformat>  . <suffix>
-taxonomy        / <singular> . terms    . <outputformat>  . <suffix>
-taxonomy        /  terms                . <outputformat>  . <suffix>
-taxonomy        /  list                 . <outputformat>  . <suffix>
+taxonomy        / <customlayout>        .  [<lang>] . [<outputformat>] . <suffix>
+taxonomy        / <singular> . terms    .  [<lang>] . [<outputformat>] . <suffix>    <-- see note 2
+taxonomy        /  terms                .  [<lang>] . [<outputformat>] . <suffix>
+taxonomy        /  list                 .  [<lang>] . [<outputformat>] . <suffix>
 
-taxonomy        / <customlayout>                          . <suffix>
-taxonomy        / <singular> . terms                      . <suffix>    <-- see note 2
-taxonomy        /  terms                                  . <suffix>
-taxonomy        /  list                                   . <suffix>  
+<singular>      / <customlayout>        .  [<lang>] . [<outputformat>] . <suffix>
+<singular>      / <singular> . terms    .  [<lang>] . [<outputformat>] . <suffix>
+<singular>      /  terms                .  [<lang>] . [<outputformat>] . <suffix>
+<singular>      /  list                 .  [<lang>] . [<outputformat>] . <suffix>    <-- see note 2
 
-<singular>      / <customlayout>        . <outputformat>  . <suffix>
-<singular>      / <singular> . terms    . <outputformat>  . <suffix>
-<singular>      /  terms                . <outputformat>  . <suffix>
-<singular>      /  list                 . <outputformat>  . <suffix>
-
-<singular>      / <customlayout>                          . <suffix>
-<singular>      / <singular> . terms                      . <suffix>
-<singular>      /  terms                                  . <suffix>
-<singular>      /  list                                   . <suffix>    <-- see note 2
-
-_default        / <customlayout>        . <outputformat>  . <suffix>
-_default        / <singular> . terms    . <outputformat>  . <suffix>
-_default        /  terms                . <outputformat>  . <suffix>
-_default        /  list                 . <outputformat>  . <suffix>
-
-_default        / <customlayout>                          . <suffix>    <-- see note 5
-_default        / <singular> . terms                      . <suffix>
-_default        /  terms                                  . <suffix>    <-- see note 3
-_default        /  list                                   . <suffix>    <-- see note 3
+_default        / <customlayout>        .  [<lang>] . [<outputformat>] . <suffix>    <-- see note 5
+_default        / <singular> . terms    .  [<lang>] . [<outputformat>] . <suffix>
+_default        /  terms                .  [<lang>] . [<outputformat>] . <suffix>
+_default        /  list                 .  [<lang>] . [<outputformat>] . <suffix>    <-- see note 3
 
 ```
 Notes:

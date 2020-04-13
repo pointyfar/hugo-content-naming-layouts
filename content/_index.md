@@ -27,33 +27,20 @@ Scroll down for lookup rules for homepage.
 ### Lookup Rules for `homepage` `.Kind`:
 
 ```
-<type>          / <customlayout> . <outputformat> . <suffix>
-<type>          /  index         . <outputformat> . <suffix>
-<type>          / <kind>         . <outputformat> . <suffix>
-<type>          /  list          . <outputformat> . <suffix>
+[directory] / filename       .  [<lang>] . [<outputformat>] . suffix
 
-<type>          / <customlayout>                  . <suffix>  <-- uncomment frontmatter line #2
-<type>          /  index                          . <suffix>
-<type>          / <kind>                          . <suffix>  <-- uncomment frontmatter line #1 (and/or #2)
-<type>          /  list                           . <suffix>
+<type>      / <customlayout> .  [<lang>] . [<outputformat>] . <suffix>  <-- uncomment frontmatter line #2
+<type>      /  index         .  [<lang>] . [<outputformat>] . <suffix>
+<type>      / <kind>         .  [<lang>] . [<outputformat>] . <suffix>  <-- uncomment frontmatter line #1 (and/or #2)
+<type>      /  list          .  [<lang>] . [<outputformat>] . <suffix>
 
+               index         .  [<lang>] . [<outputformat>] . <suffix>   <-- see note A.1, A.3, B
+              <kind>         .  [<lang>] . [<outputformat>] . <suffix>   <-- see note A.2
+               list          .  [<lang>] . [<outputformat>] . <suffix>   <-- see note A.4
 
-                   index      . <outputformat> . <suffix>
-                  <kind>      . <outputformat> . <suffix>
-                   list       . <outputformat> . <suffix>   <-- see note A.4
-
-                   index                       . <suffix>   <-- see note A.1, A.3, B
-                  <kind>                       . <suffix>   <-- see note A.2
-                   list                        . <suffix>
-
-
-_default        /  index      . <outputformat> . <suffix>
-_default        / <kind>      . <outputformat> . <suffix>   
-_default        /  list       . <outputformat> . <suffix>
-
-_default        /  index                       . <suffix>
-_default        / <kind>                       . <suffix>
-_default        /  list                        . <suffix>   <-- present, ignored
+_default    /  index         .  [<lang>] . [<outputformat>] . <suffix>
+_default    / <kind>         .  [<lang>] . [<outputformat>] . <suffix>   
+_default    /  list          .  [<lang>] . [<outputformat>] . <suffix>   <-- present, ignored
 
 ```
 
