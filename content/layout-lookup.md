@@ -26,7 +26,9 @@ Let's look at each page `.Kind` to see how the values of these parts are affecte
 
 ### `home`
 
-`example.com/index.html`
+```
+content/_index.md   =>  example.com/index.html
+```
 
 1. `layoutDir`: By default, the value is `layouts`. You can configure this value, but for the examples we will assume this default value is used.
 
@@ -61,7 +63,9 @@ Items #1, #4, #5, #6 are the same for `.Kind`s below.
 
 ### `section`
 
-`example.com/posts/`
+```
+content/posts/_index.md       =>  example.com/posts/
+```
 
 2. `[directory]`: its value can be
     1. derived from `.Type`[^type]
@@ -81,7 +85,12 @@ See [above](#home) for #1, #4, #5, #6
 
 ### `page`
 
-`example.com/posts/post-one/`
+```
+content/posts/post-one.md           =>  example.com/posts/post-one/
+content/posts/post-one/index.md     =>  example.com/posts/post-one/
+content/about.md                    =>  example.com/about/
+content/about/index.md              =>  example.com/about/
+```
 
 
 2. `[directory]`: its value can be
@@ -98,7 +107,10 @@ See [above](#home) for #1, #4, #5, #6
 
 ### `taxonomyTerm`
 
-`example.com/tags/`
+```
+content/tags/_index.md      =>  example.com/tags/
+```
+
 ```
 [taxonomies]
 tag = "tags"
@@ -122,7 +134,10 @@ See [above](#home) for #1, #4, #5, #6
 
 ### `taxonomy`
 
-`example.com/tags/foo/`
+```
+content/tags/foo/_index.md      =>  example.com/tags/foo/
+```
+
 ```
 [taxonomies]
 tag = "tags"
