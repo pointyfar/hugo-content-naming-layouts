@@ -1,5 +1,5 @@
 {{ define "set-layout" }}
-{{.Scratch.Set "layout" "layouts/page/customlayout.la.html"}}
+{{.Scratch.Set "layout" "layouts/metals/customlayout.la.html"}}
 {{ end }}
 {{ define "main" }}
 <div class="card">
@@ -9,7 +9,7 @@
             {{.}}
         {{ else }}
         {{ $f := print .File }}
-        {{ with.Sites.First.GetPage $f }}
+        {{ with .Sites.First.GetPage $f }}
             {{.Content}}
         {{ end }}
         {{end}}
