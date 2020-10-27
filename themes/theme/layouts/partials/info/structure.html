@@ -17,8 +17,10 @@
   {{ if $currentLevel.IsNode }}
     {{ $children := $currentLevel.Pages }}
     <span class="{{cond $currentLevel.IsHome "is-size-4" "" }}">
-      <a href="{{$currentLevel.Permalink}}"  class="{{ cond (eq $currentPage.Permalink $currentLevel.Permalink) "has-text-danger has-text-weight-bold" ""}}">
-        {{$currentLevel.Title}}
+      {{ $isred := eq $currentPage.Permalink $currentLevel.Permalink }}
+      {{ $isred = or $isred (in $currentLevel.RegularPagesRecursive $currentPage) }}
+      <a href="{{$currentLevel.Permalink}}"  class="{{ cond ($isred) "has-text-danger has-text-weight-bold" ""}}">
+        {{$currentLevel.Title}} 
       </a>
       {{with $currentLevel.File}}<span class="has-text-grey-light"> {{.}}</span>{{end}}
     </span>
@@ -31,7 +33,7 @@
     {{ else }}
     <li>
       <a href="{{.Permalink}}"  class="{{ cond (eq . $currentPage) "has-text-danger has-text-weight-bold" ""}}">
-        {{ .Title }}
+        {{ .Title }} 
       </a>
       {{with .File}}<span class="has-text-grey-light"> {{.}}</span>{{end}}
     </li>
